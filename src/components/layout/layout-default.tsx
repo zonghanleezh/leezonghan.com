@@ -1,5 +1,3 @@
-import Footer from "@/components/layout/footer"
-
 interface Props {
   children: React.ReactNode
 }

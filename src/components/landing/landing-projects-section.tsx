@@ -9,7 +9,9 @@ const LandingProjectsSection = () => {
 
       <div className="flex flex-col gap-2 lg:gap-4">
         {PROJECTS_DATA.map((project) => (
-          <div className="flex flex-col gap-4 rounded-lg border p-4 lg:flex-row lg:gap-10 lg:p-5">
+          <div
+            key={project.title}
+            className="flex flex-col gap-4 rounded-lg border p-4 lg:flex-row lg:gap-10 lg:p-5">
             <div className="flex items-center lg:w-1/3">
               <Image
                 src={project.imageUrl}
@@ -18,9 +20,7 @@ const LandingProjectsSection = () => {
               />
             </div>
 
-            <div
-              key={project.title}
-              className="flex flex-col gap-2 lg:w-2/3 lg:gap-4">
+            <div className="flex flex-col gap-2 lg:w-2/3 lg:gap-4">
               <h3 className="font-semibold lg:text-lg">{project.title}</h3>
 
               <p className="text-xs lg:text-sm">{project.description}</p>
