@@ -10,7 +10,7 @@ const LandingExperienceSection = () => {
         <h2 className="text-lg font-semibold lg:text-2xl">Experience</h2>
 
         <Link
-          href="/resume"
+          href="/docs/lee-zong-han-resume.pdf"
           target="_blank"
           className="group w-fit text-sm font-semibold transition-colors hover:text-red-600">
           View Full Resume
