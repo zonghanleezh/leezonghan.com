@@ -12,9 +12,9 @@ const LandingExperienceSection = () => {
         <Link
           href="/resume"
           target="_blank"
-          className="group w-fit text-sm font-semibold transition-colors hover:text-red-500">
+          className="group w-fit text-sm font-semibold transition-colors hover:text-red-600">
           View Full Resume
-          <ArrowUpRightIcon className="ml-1 inline-block size-4 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:scale-105" />
+          <ArrowUpRightIcon className="ml-1 inline-block size-4 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
         </Link>
       </div>
 
@@ -32,7 +32,7 @@ const LandingExperienceSection = () => {
                   <span>
                     {experience.title} ⋅ {experience.company}
                   </span>
-                  <ExternalLinkIcon className="ml-2 inline-block size-3 transition-all group-hover:scale-105 group-hover:text-red-500 lg:size-4" />
+                  <ExternalLinkIcon className="ml-2 inline-block size-3 transition-all group-hover:text-red-600 lg:size-4" />
                 </h3>
 
                 <p className="text-xs text-muted-foreground lg:text-sm">
