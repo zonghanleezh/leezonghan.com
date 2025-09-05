@@ -8,7 +8,7 @@ import SocialButtons from "@/components/social-buttons"
 
 const IndexPage = () => {
   return (
-    <div className="flex min-h-screen flex-col justify-between gap-6 p-5 lg:flex-row lg:gap-10 lg:px-20 lg:py-12">
+    <div className="mx-auto flex min-h-screen max-w-7xl flex-col justify-between gap-6 p-5 lg:flex-row lg:gap-10 lg:p-12">
       {/* Left side */}
       <div className="flex flex-col items-center gap-2 lg:sticky lg:top-12 lg:h-[calc(100vh-6rem)] lg:w-1/3 lg:items-start lg:gap-4">
         <LandingProfileSection />
