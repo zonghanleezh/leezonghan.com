@@ -9,7 +9,7 @@ import {
   useSearchParams
 } from "next/navigation"
 
-// import { usePostHog } from "@/hooks/usePosthog"
+import { usePostHog } from "@/hooks/usePosthog"
 
 const ignorePrefetch: string[] = []
 
@@ -92,7 +92,7 @@ interface Props extends ComponentProps<typeof NextLink> {
 
 const LinkComponent = (props: Props) => {
   const { href, persistParams, ...restProps } = props
-  // const { event } = usePostHog()
+  const { event } = usePostHog()
   const searchParams = useSearchParams()
   const pathname = usePathname()
 
@@ -100,7 +100,7 @@ const LinkComponent = (props: Props) => {
 
   return (
     <NextLink
-      // onClick={() => event("link-click", { href: modifiedHref })}
+      onClick={() => event("link-click", { href: modifiedHref })}
       prefetch={!ignorePrefetch.includes(href.toString())}
       {...restProps}
       href={modifiedHref}

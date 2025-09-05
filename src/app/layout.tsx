@@ -3,18 +3,19 @@ import { cn } from "@/lib/cn"
 import "./globals.css"
 
 import dynamic from "next/dynamic"
-import { Montserrat } from "next/font/google"
+import { Montserrat as Font } from "next/font/google"
 import config from "@/configs"
 import { IS_PROD } from "@/configs/env.config"
 
 import { JsonLdPerson } from "@/lib/structured-data/jsonld-person"
 import LayoutDefault from "@/components/layout/layout-default"
+import PosthogProvider from "@/components/trackers/posthog/posthog-provider"
 
 const ViewportIndicator = !IS_PROD
   ? dynamic(() => import("@/components/viewport-indicator"), { ssr: false })
   : () => null
 
-const montserrat = Montserrat({
+const font = Font({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -54,9 +55,11 @@ export default function RootLayout({
         <SEOData />
       </head>
 
-      <body className={cn(montserrat.className, "antialiased")}>
-        <MainContent>{children}</MainContent>
-      </body>
+      <PosthogProvider>
+        <body className={cn(font.className, "antialiased")}>
+          <MainContent>{children}</MainContent>
+        </body>
+      </PosthogProvider>
     </html>
   )
 }
