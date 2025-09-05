@@ -17,7 +17,7 @@ export const WEBSITE_METADATA: PageMetadata = {
   description: `Explore the portfolio of Lee Zong Han, a software engineer based in Singapore specialising in building modern and responsive full-stack web applications.`,
   url: `https://leezonghan.com`,
   ogImage: {
-    url: `https://leezonghan.com/images/og/og-image-home.webp`, // TODO
+    url: `https://leezonghan.com/images/og-image-home.webp`,
     alt: `OG Image Home`
   }
 }
@@ -27,7 +27,7 @@ export const RESUME_METADATA: PageMetadata = {
   description: `A summary of Lee Zong Han's experience as a software engineer in Singapore. Outlines his experience in full-stack development.`,
   url: `https://leezonghan.com/resume`,
   ogImage: {
-    url: `https://leezonghan.com/images/og/og-image-resume.webp`, // TODO
+    url: `https://leezonghan.com/images/og-image-home.webp`,
     alt: `OG Image Resume`
   }
 }
