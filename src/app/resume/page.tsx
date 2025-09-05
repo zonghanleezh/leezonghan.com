@@ -28,7 +28,7 @@ const ResumePage = () => {
     <>
       <h1 className="hidden">Lee Zong Han&apos;s Resume</h1>
       <iframe
-        src="/lee-zong-han-resume.pdf"
+        src="/docs/lee-zong-han-resume.pdf"
         className="h-screen w-full"
         title="Lee Zong Han's Resume"
       />
