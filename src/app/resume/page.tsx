@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const ResumePage = () => {
   return (
     <>
-      <h2 className="hidden">Lee Zong Han&apos;s Resume</h2>
+      <h1 className="hidden">Lee Zong Han&apos;s Resume</h1>
       <iframe
         src="/lee-zong-han-resume.pdf"
         className="h-screen w-full"
