@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const LandingProfileSection = () => {
   return (
-    <div className="flex max-w-[400px] flex-col items-center gap-2 text-center lg:items-start lg:gap-3 lg:text-left">
+    <div className="flex max-w-[320px] flex-col items-center gap-2 text-center lg:max-w-[400px] lg:items-start lg:gap-3 lg:text-left">
       <div className="relative aspect-square w-full max-w-40 md:max-w-64 lg:max-w-96">
         <Image
           src="/images/lee-zong-han-avatar.webp"
@@ -12,7 +12,7 @@ const LandingProfileSection = () => {
         />
       </div>
 
-      <div className="lg:space-y-1">
+      <div className="mt-2 lg:space-y-1">
         <h1 className="text-2xl font-semibold lg:text-4xl">Lee Zong Han</h1>
         <p className="text-base lg:text-xl">Software Engineer</p>
       </div>
