@@ -11,7 +11,7 @@ const LandingProjectsSection = () => {
         {PROJECTS_DATA.map((project) => (
           <div
             key={project.title}
-            className="flex flex-col gap-4 rounded-lg border p-4 lg:flex-row lg:gap-10 lg:p-5">
+            className="flex flex-col gap-4 rounded-lg border p-3 lg:flex-row lg:gap-10 lg:p-4">
             <div className="flex items-center lg:w-1/3">
               <Image
                 src={project.imageUrl}

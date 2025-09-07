@@ -27,7 +27,7 @@ const LandingExperienceSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group rounded-lg bg-zinc-100">
-              <div className="space-y-1 p-4 lg:space-y-2 lg:p-5">
+              <div className="space-y-1 p-3 lg:space-y-2 lg:p-4">
                 <h3 className="font-semibold lg:text-lg">
                   <span>
                     {experience.title} ⋅ {experience.company}
