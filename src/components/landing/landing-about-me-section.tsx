@@ -2,9 +2,7 @@ import Link from "@/components/link"
 
 const LandingAboutMeSection = () => {
   return (
-    <div
-      id="about-me"
-      className="flex flex-col gap-2 text-sm font-medium lg:gap-4 lg:text-base">
+    <div id="about-me" className="flex flex-col gap-3 text-sm lg:text-base">
       <h2 className="text-lg font-semibold lg:text-2xl">About Me</h2>
       <p>
         My journey into coding began in 2022 and has since grown into a career

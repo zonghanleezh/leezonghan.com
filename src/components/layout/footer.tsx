@@ -1,6 +1,5 @@
 import { Separator } from "@/components/ui/separator"
-
-import SocialButtons from "../social-buttons"
+import SocialButtons from "@/components/social-buttons"
 
 const Footer = () => {
   return (
@@ -8,7 +7,7 @@ const Footer = () => {
       <Separator className="my-1" />
 
       <div className="flex items-center justify-between">
-        <span className="text-xs font-medium lg:text-sm">
+        <span className="text-sm">
           Lee Zong Han © {new Date().getFullYear()}
         </span>
 

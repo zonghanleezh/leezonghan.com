@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn"
 import "./globals.css"
 
 import dynamic from "next/dynamic"
-import { Montserrat as Font } from "next/font/google"
+import { Outfit as Font } from "next/font/google"
 import config from "@/configs"
 import { IS_PROD } from "@/configs/env.config"
 
