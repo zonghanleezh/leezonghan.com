@@ -3,7 +3,7 @@ import { cn } from "@/lib/cn"
 import "./globals.css"
 
 import dynamic from "next/dynamic"
-import { Outfit as Font } from "next/font/google"
+import { Instrument_Sans as Font } from "next/font/google"
 import config from "@/configs"
 import { IS_PROD } from "@/configs/env.config"
 
@@ -16,7 +16,8 @@ const ViewportIndicator = !IS_PROD
   : () => null
 
 const font = Font({
-  weight: ["300", "400", "500", "600", "700"],
+  // weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
   preload: true,
