@@ -1,12 +1,12 @@
 import { MetadataRoute } from "next"
 import { headers } from "next/headers"
 import { IS_PROD } from "@/configs/env.config"
-import { WEBSITE_METADATA } from "@/configs/site/metadata.config"
+import { METADATA_WEBSITE } from "@/configs/site/metadata.config"
 
 const robots = (): MetadataRoute.Robots => {
   const headersList = headers()
   const host = headersList.get("host") || ""
-  const allowedDomain = new URL(WEBSITE_METADATA.url).host
+  const allowedDomain = new URL(METADATA_WEBSITE.url).host
 
   const isAllowed = allowedDomain === host
 
@@ -23,7 +23,7 @@ const robots = (): MetadataRoute.Robots => {
           "/*.js$"
         ]
       },
-      sitemap: [`${WEBSITE_METADATA.url}/sitemap.xml`]
+      sitemap: [`${METADATA_WEBSITE.url}/sitemap.xml`]
     }
   } else {
     return {

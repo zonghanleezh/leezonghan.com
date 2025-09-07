@@ -1,4 +1,4 @@
-import { WEBSITE_METADATA } from "@/configs/site/metadata.config"
+import { METADATA_WEBSITE } from "@/configs/site/metadata.config"
 import { Person, WithContext } from "schema-dts"
 
 export const JsonLdPerson = () => {
@@ -7,8 +7,8 @@ export const JsonLdPerson = () => {
     "@type": "Person",
     name: "Lee Zong Han",
     jobTitle: "Software Engineer",
-    url: WEBSITE_METADATA.url,
-    image: `${WEBSITE_METADATA.url}/images/lee-zong-han-avatar.jpg`,
+    url: METADATA_WEBSITE.url,
+    image: `${METADATA_WEBSITE.url}/images/lee-zong-han-avatar.jpg`,
     sameAs: [
       "https://www.linkedin.com/in/lee-zong-han",
       "https://github.com/zonghanleezh"
