@@ -1,8 +1,8 @@
-import Link from "@/components/link"
+import Link from "@/components/common/link"
 
 const LandingAboutMeSection = () => {
   return (
-    <div id="about-me" className="flex flex-col gap-3 text-sm lg:text-base">
+    <div className="flex flex-col gap-3 text-sm lg:text-base">
       <h2 className="text-lg font-semibold lg:text-2xl">About Me</h2>
       <p>
         My journey into coding began in 2022 and has since grown into a career
@@ -39,6 +39,10 @@ const LandingAboutMeSection = () => {
         Outside of work, I enjoy running, exploring the outdoors, and diving
         into non-fiction books to continually expand my knowledge and
         perspective.
+      </p>
+      <p>
+        I am also available for freelance projects. If you have an idea
+        you&apos;d like to bring to life, let&apos;s connect!
       </p>
     </div>
   )

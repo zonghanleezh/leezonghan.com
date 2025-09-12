@@ -1,10 +1,11 @@
 import Image from "next/image"
 
 import PROJECTS_DATA from "@/lib/data/projects.data"
+import Badge from "@/components/common/badge"
 
 const LandingProjectsSection = () => {
   return (
-    <div id="projects" className="flex flex-col gap-3 lg:gap-4">
+    <div className="flex flex-col gap-3 lg:gap-4">
       <h2 className="text-lg font-semibold lg:text-2xl">Projects</h2>
 
       <div className="flex flex-col gap-3 lg:gap-4">
@@ -27,11 +28,7 @@ const LandingProjectsSection = () => {
 
               <div className="flex flex-wrap gap-1.5">
                 {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-full bg-zinc-100 px-3 py-1 text-sm">
-                    {tech}
-                  </span>
+                  <Badge key={tech} text={tech} />
                 ))}
               </div>
             </div>

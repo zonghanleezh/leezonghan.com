@@ -1,9 +1,9 @@
 import { ElementType } from "react"
-import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react"
+import { GithubIcon, LinkedinIcon } from "lucide-react"
 
 import { cn } from "@/lib/cn"
 import { Button } from "@/components/ui/button"
-import Link from "@/components/link"
+import Link from "@/components/common/link"
 
 interface SocialLink {
   name: string
@@ -25,11 +25,6 @@ const SOCIAL_LINKS: SocialLink[] = [
     name: "github",
     Icon: GithubIcon,
     url: "https://github.com/zonghanleezh"
-  },
-  {
-    name: "email",
-    Icon: MailIcon,
-    url: "mailto:zonghanleezh@gmail.com"
   }
 ]
 

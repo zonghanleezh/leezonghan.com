@@ -8,6 +8,7 @@ const LandingProfileSection = () => {
           src="/images/lee-zong-han-avatar.webp"
           alt="Lee Zong Han"
           fill
+          sizes="(min-width: 1024px) 384px, (min-width: 768px) 256px, 160px"
           className="rounded-xl object-cover"
         />
       </div>

@@ -1,11 +1,11 @@
 import { ArrowUpRightIcon, ExternalLinkIcon } from "lucide-react"
 
 import { EXPERIENCES_DATA } from "@/lib/data/experiences.data"
-import Link from "@/components/link"
+import Link from "@/components/common/link"
 
 const LandingExperienceSection = () => {
   return (
-    <div id="experience" className="flex flex-col gap-3 lg:gap-4">
+    <div className="flex flex-col gap-3 lg:gap-4">
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold lg:text-2xl">Experience</h2>
 
@@ -23,7 +23,7 @@ const LandingExperienceSection = () => {
           return (
             <Link
               href={experience.url}
-              key={experience.title}
+              key={experience.company}
               target="_blank"
               rel="noopener noreferrer"
               className="group rounded-lg bg-zinc-100">

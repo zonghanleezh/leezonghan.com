@@ -8,6 +8,7 @@ import config from "@/configs"
 import { IS_PROD } from "@/configs/env.config"
 
 import { JsonLdPerson } from "@/lib/structured-data/jsonld-person"
+import { Toaster } from "@/components/ui/sonner"
 import LayoutDefault from "@/components/layout/layout-default"
 import PosthogProvider from "@/components/trackers/posthog/posthog-provider"
 
@@ -16,7 +17,6 @@ const ViewportIndicator = !IS_PROD
   : () => null
 
 const font = Font({
-  // weight: ["300", "400", "500", "600", "700"],
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
@@ -59,6 +59,7 @@ export default function RootLayout({
       <PosthogProvider>
         <body className={cn(font.className, "antialiased")}>
           <MainContent>{children}</MainContent>
+          <Toaster position="top-center" richColors />
         </body>
       </PosthogProvider>
     </html>
