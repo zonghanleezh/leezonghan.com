@@ -1,14 +1,20 @@
 import SERVICES_DATA from "@/lib/data/services.data"
 import Badge from "@/components/common/badge"
+import Link from "@/components/common/link"
 
 const LandingServicesSection = () => {
   return (
-    <div className="flex flex-col gap-3 text-sm lg:gap-4 lg:text-base">
+    <div className="flex flex-col gap-3 lg:gap-4">
       <h2 className="text-lg font-semibold lg:text-2xl">How I Can Help</h2>
-      <p>
-        Have a project in mind? I can help you bring your vision to life. From
-        initial concept to final deployment, I&apos;ll work with you to build a
-        solution that meets your unique needs.
+      <p className="text-sm lg:text-base">
+        Have a project in mind? I can{" "}
+        <Link
+          href="/#how-i-can-help"
+          className="font-semibold transition-colors hover:text-zinc-500">
+          help you bring your vision to life
+        </Link>
+        . From initial concept to final deployment, I&apos;ll work with you to
+        build a solution that meets your unique needs.
       </p>
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4">
