@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import Link from "@/components/common/link"
+
 const LandingProfileSection = () => {
   return (
     <div className="flex max-w-[320px] flex-col items-center gap-2 text-center lg:max-w-[400px] lg:items-start lg:gap-3 lg:text-left">
@@ -19,12 +21,17 @@ const LandingProfileSection = () => {
       </div>
 
       <p className="text-sm lg:text-base">
-        I&apos;m a developer driven by a passion to make a positive impact
-        through technology.
+        I&apos;m a full-stack developer driven to build products. I translate
+        complex requirements into robust solutions that solve user problems.
       </p>
 
       <p className="text-sm lg:text-base">
-        Let&apos;s connect and build something great together!
+        <Link
+          href="/#get-in-touch"
+          className="font-semibold transition-colors hover:text-zinc-500">
+          Let&apos;s connect
+        </Link>{" "}
+        and build something great together!
       </p>
     </div>
   )
