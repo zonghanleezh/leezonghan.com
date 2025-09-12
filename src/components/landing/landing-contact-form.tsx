@@ -63,7 +63,7 @@ const LandingContactForm = () => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-4 font-medium">
+        className="flex flex-col gap-4 font-medium">
         <FormField
           control={form.control}
           name="fullName"
@@ -116,7 +116,7 @@ const LandingContactForm = () => {
           )}
         />
 
-        <Button className="bg-zinc-800">
+        <Button className="ml-auto w-fit bg-zinc-800" disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>

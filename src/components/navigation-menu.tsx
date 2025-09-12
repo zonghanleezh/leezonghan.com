@@ -18,20 +18,20 @@ const NAVIGATION_BUTTONS: NavigationButton[] = [
     name: "About Me"
   },
   {
-    id: "services",
-    name: "Services"
+    id: "how-i-can-help",
+    name: "How I Can Help"
   },
   {
-    id: "experience",
-    name: "Experience"
+    id: "my-journey",
+    name: "My Journey"
   },
   {
-    id: "projects",
-    name: "Projects"
+    id: "my-work",
+    name: "My Work"
   },
   {
-    id: "contact",
-    name: "Contact"
+    id: "get-in-touch",
+    name: "Get In Touch"
   }
 ]
 
@@ -60,7 +60,7 @@ const NavigationMenu = () => {
             key={button.id}
             variant="ghost"
             className={cn(
-              "w-full hover:bg-zinc-600 hover:text-primary-foreground",
+              "w-full px-1 hover:bg-zinc-600 hover:text-primary-foreground",
               activeSection === `${button.id}` &&
                 "bg-zinc-600 text-primary-foreground"
             )}

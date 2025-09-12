@@ -30,16 +30,16 @@ const IndexPage = () => {
           <div id="about-me" className={COMMON_CLASSES}>
             <LandingAboutMeSection />
           </div>
-          <div id="services" className={COMMON_CLASSES}>
+          <div id="how-i-can-help" className={COMMON_CLASSES}>
             <LandingServicesSection />
           </div>
-          <div id="experience" className={COMMON_CLASSES}>
+          <div id="my-journey" className={COMMON_CLASSES}>
             <LandingExperienceSection />
           </div>
-          <div id="projects" className={COMMON_CLASSES}>
+          <div id="my-work" className={COMMON_CLASSES}>
             <LandingProjectsSection />
           </div>
-          <div id="contact" className={COMMON_CLASSES}>
+          <div id="get-in-touch" className={COMMON_CLASSES}>
             <LandingContactSection />
           </div>
 

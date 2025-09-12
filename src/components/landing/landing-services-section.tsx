@@ -4,7 +4,7 @@ import Badge from "@/components/common/badge"
 const LandingServicesSection = () => {
   return (
     <div className="flex flex-col gap-3 lg:gap-4">
-      <h2 className="text-lg font-semibold lg:text-2xl">Services</h2>
+      <h2 className="text-lg font-semibold lg:text-2xl">How I Can Help</h2>
 
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:gap-4">
         {SERVICES_DATA.map((service) => (
