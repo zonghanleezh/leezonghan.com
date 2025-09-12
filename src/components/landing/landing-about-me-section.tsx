@@ -36,9 +36,7 @@ const LandingAboutMeSection = () => {
         </Link>
         . My role extends beyond web development to include implementing
         conversational chatbots and workflow automations that enhance user
-        engagement and improve operational efficiency. I work
-        cross-departmentally to ensure a seamless integration of user experience
-        and technical functionality.
+        engagement and improve operational efficiency.
       </p>
       <p>
         Outside of work, I enjoy running, exploring the outdoors, and diving
