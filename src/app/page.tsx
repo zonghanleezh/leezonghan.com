@@ -8,7 +8,7 @@ import Footer from "@/components/layout/footer"
 import NavigationMenu from "@/components/navigation-menu"
 import SocialButtons from "@/components/social-buttons"
 
-const COMMON_CLASSES = "scroll-mt-20 lg:scroll-mt-32"
+const COMMON_CLASSES = "scroll-mt-20 lg:scroll-mt-36"
 
 const IndexPage = () => {
   return (
