@@ -52,7 +52,7 @@ const LandingAboutMeSection = () => {
         </Link>
         . If you have an idea you&apos;d like to bring to life,{" "}
         <Link
-          href="/#how-i-can-help"
+          href="/#get-in-touch"
           className="font-semibold transition-colors hover:text-zinc-500">
           let&apos;s connect!
         </Link>
