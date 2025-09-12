@@ -20,7 +20,7 @@ const LandingProfileSection = () => {
         <h2 className="text-base lg:text-xl">Software Engineer</h2>
       </div>
 
-      <p className="text-sm lg:text-base">
+      <p className="text-pretty text-sm lg:text-base">
         I&apos;m a full-stack developer driven to build products. I translate
         complex requirements into robust solutions that solve user problems.
       </p>
