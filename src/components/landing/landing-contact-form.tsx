@@ -116,7 +116,9 @@ const LandingContactForm = () => {
           )}
         />
 
-        <Button className="ml-auto w-fit bg-zinc-800" disabled={isSubmitting}>
+        <Button
+          className="w-full bg-zinc-800 md:ml-auto md:w-fit"
+          disabled={isSubmitting}>
           {isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>
