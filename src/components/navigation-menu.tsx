@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import { cn } from "@/lib/cn"
 import { useUrlHash } from "@/hooks/useUrlHash"
@@ -38,6 +38,11 @@ const NAVIGATION_BUTTONS: NavigationButton[] = [
 const NavigationMenu = () => {
   const hash = useUrlHash()
   const [activeSection, setActiveSection] = useState(hash)
+  const [isOverflowing, setIsOverflowing] = useState({
+    left: false,
+    right: false
+  })
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (hash) {
@@ -47,31 +52,93 @@ const NavigationMenu = () => {
     }
   }, [hash])
 
+  const checkOverflow = () => {
+    const container = scrollContainerRef.current
+    if (container) {
+      const hasOverflow = container.scrollWidth > container.clientWidth
+      const scrollEndReached =
+        container.scrollLeft >=
+        container.scrollWidth - container.clientWidth - 1
+
+      setIsOverflowing({
+        left: hasOverflow && container.scrollLeft > 0,
+        right: hasOverflow && !scrollEndReached
+      })
+    }
+  }
+
+  useEffect(() => {
+    const container = scrollContainerRef.current
+    checkOverflow()
+
+    window.addEventListener("resize", checkOverflow)
+    if (container) {
+      container.addEventListener("scroll", checkOverflow)
+    }
+
+    return () => {
+      window.removeEventListener("resize", checkOverflow)
+      if (container) {
+        container.removeEventListener("scroll", checkOverflow)
+      }
+    }
+  }, [])
+
+  const handleNavigationButtonClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    buttonId: string
+  ) => {
+    setActiveSection(buttonId)
+    event.currentTarget.scrollIntoView({
+      behavior: "smooth",
+      inline: "center",
+      block: "nearest"
+    })
+  }
+
   return (
     <div className="flex flex-col bg-background">
       {/* Spacer */}
       <div className="h-5 lg:h-[68px]" />
 
       {/* Navigation buttons */}
-      <div className="flex w-full gap-1 rounded-lg bg-zinc-800 p-1 md:justify-between md:gap-1.5 md:p-1.5 lg:gap-2 lg:p-2">
-        {NAVIGATION_BUTTONS.map((button) => (
-          <Button
-            asChild
-            key={button.id}
-            variant="ghost"
-            className={cn(
-              "w-full px-1 hover:bg-zinc-600 hover:text-primary-foreground",
-              activeSection === `${button.id}` &&
-                "bg-zinc-600 text-primary-foreground"
-            )}
-            onClick={() => setActiveSection(`${button.id}`)}>
-            <Link
-              href={`/#${button.id}`}
-              className="text-xs font-medium text-zinc-300 sm:text-sm lg:text-base">
-              {button.name}
-            </Link>
-          </Button>
-        ))}
+      <div className="relative">
+        <div
+          ref={scrollContainerRef}
+          className="scrollbar-hide flex w-full gap-1.5 overflow-x-auto rounded-lg bg-zinc-800 p-1.5 md:justify-between lg:gap-2 lg:p-2">
+          {NAVIGATION_BUTTONS.map((button) => (
+            <Button
+              asChild
+              key={button.id}
+              variant="ghost"
+              className={cn(
+                "w-full px-1.5 hover:bg-zinc-600 hover:text-primary-foreground",
+                activeSection === `${button.id}` &&
+                  "bg-zinc-600 text-primary-foreground"
+              )}>
+              <Link
+                href={`/#${button.id}`}
+                onClick={(e) => handleNavigationButtonClick(e, button.id)}
+                className="whitespace-nowrap text-xs font-medium text-zinc-300 sm:text-sm lg:text-base">
+                {button.name}
+              </Link>
+            </Button>
+          ))}
+        </div>
+        {/* Left fade */}
+        <div
+          className={cn(
+            "pointer-events-none absolute left-0 top-0 h-full w-8 rounded-l-lg bg-gradient-to-r from-zinc-800 to-transparent transition-opacity duration-300",
+            isOverflowing.left ? "opacity-100" : "opacity-0"
+          )}
+        />
+        {/* Right fade */}
+        <div
+          className={cn(
+            "pointer-events-none absolute right-0 top-0 h-full w-8 rounded-r-lg bg-gradient-to-l from-zinc-800 to-transparent transition-opacity duration-300",
+            isOverflowing.right ? "opacity-100" : "opacity-0"
+          )}
+        />
       </div>
     </div>
   )
