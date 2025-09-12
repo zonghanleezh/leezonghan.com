@@ -13,6 +13,7 @@ export const JsonLdPerson = () => {
       "https://www.linkedin.com/in/lee-zong-han",
       "https://github.com/zonghanleezh"
     ],
+    email: "mailto:zonghanleezh@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Singapore",

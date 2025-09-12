@@ -14,7 +14,7 @@ const LandingProfileSection = () => {
 
       <div className="mt-2 lg:space-y-1">
         <h1 className="text-2xl font-semibold lg:text-4xl">Lee Zong Han</h1>
-        <p className="text-base lg:text-xl">Software Engineer</p>
+        <h2 className="text-base lg:text-xl">Software Engineer</h2>
       </div>
 
       <p className="text-sm lg:text-base">
