@@ -9,7 +9,7 @@ const LandingServicesSection = () => {
       <p className="text-sm lg:text-base">
         Have a project in mind? I can{" "}
         <Link
-          href="/#how-i-can-help"
+          href="/#get-in-touch"
           className="font-semibold transition-colors hover:text-zinc-500">
           help you bring your vision to life
         </Link>
