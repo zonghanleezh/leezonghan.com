@@ -5,7 +5,7 @@ import Link from "@/components/common/link"
 const LandingServicesSection = () => {
   return (
     <div className="flex flex-col gap-3 lg:gap-4">
-      <h2 className="text-xl font-semibold lg:text-3xl">How I Can Help</h2>
+      <h2 className="text-xl font-semibold lg:text-2xl">How I Can Help</h2>
       <p className="text-sm lg:text-base">
         Have a project in mind? I can{" "}
         <Link

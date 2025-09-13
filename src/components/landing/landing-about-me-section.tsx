@@ -3,7 +3,7 @@ import Link from "@/components/common/link"
 const LandingAboutMeSection = () => {
   return (
     <div className="flex flex-col gap-3 text-sm lg:text-base">
-      <h2 className="text-xl font-semibold lg:text-3xl">About Me</h2>
+      <h2 className="text-xl font-semibold lg:text-2xl">About Me</h2>
       <p>
         My journey into coding began in 2022 and has since grown into a career
         from building platforms and landing pages to API services and anything

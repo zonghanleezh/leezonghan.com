@@ -7,7 +7,7 @@ const LandingExperienceSection = () => {
   return (
     <div className="flex flex-col gap-3 lg:gap-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold lg:text-3xl">My Journey</h2>
+        <h2 className="text-xl font-semibold lg:text-2xl">My Journey</h2>
 
         <Link
           href="/docs/lee-zong-han-resume.pdf"
