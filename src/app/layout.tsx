@@ -3,7 +3,8 @@ import { cn } from "@/lib/cn"
 import "./globals.css"
 
 import dynamic from "next/dynamic"
-import { Instrument_Sans as Font } from "next/font/google"
+import { Instrument_Sans } from "next/font/google"
+import localFont from "next/font/local"
 import config from "@/configs"
 import { IS_PROD } from "@/configs/env.config"
 
@@ -16,12 +17,20 @@ const ViewportIndicator = !IS_PROD
   ? dynamic(() => import("@/components/viewport-indicator"), { ssr: false })
   : () => null
 
-const font = Font({
-  weight: ["400", "500", "600", "700"],
+// Fonts
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument-sans",
   subsets: ["latin"],
   display: "swap",
   preload: true,
   fallback: ["system-ui", "sans-serif"]
+})
+const gambetta = localFont({
+  src: "../../public/fonts/Gambetta-Variable.woff2",
+  variable: "--font-gambetta",
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "serif"]
 })
 
 // Settings
@@ -57,7 +66,12 @@ export default function RootLayout({
       </head>
 
       <PosthogProvider>
-        <body className={cn(font.className, "antialiased")}>
+        <body
+          className={cn(
+            instrumentSans.variable,
+            gambetta.variable,
+            "antialiased"
+          )}>
           <MainContent>{children}</MainContent>
           <Toaster position="top-center" richColors />
         </body>

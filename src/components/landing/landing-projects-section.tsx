@@ -6,7 +6,7 @@ import Badge from "@/components/common/badge"
 const LandingProjectsSection = () => {
   return (
     <div className="flex flex-col gap-3 lg:gap-4">
-      <h2 className="text-lg font-semibold lg:text-2xl">My Work</h2>
+      <h2 className="text-xl font-semibold lg:text-3xl">My Work</h2>
 
       <div className="flex flex-col gap-3 lg:gap-4">
         {PROJECTS_DATA.map((project) => (
