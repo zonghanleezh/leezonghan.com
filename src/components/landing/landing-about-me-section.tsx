@@ -5,56 +5,42 @@ const LandingAboutMeSection = () => {
     <div className="flex flex-col gap-3 text-sm lg:text-base">
       <h2 className="text-xl font-semibold lg:text-2xl">About Me</h2>
       <p>
-        My journey into coding began in 2022 and has since grown into a career
-        from building platforms and landing pages to API services and anything
-        in between. I have experience in both the{" "}
-        <Link
-          href="/#my-journey"
-          className="font-semibold transition-colors hover:text-zinc-500">
-          fintech and startup space
-        </Link>
-        , where I&apos;ve contributed to key projects from conception to
-        deployment.
+        I&apos;m a software developer who builds impactful digital solutions for
+        fintechs and startups. My expertise lies in taking projects from concept
+        to deployment, creating platforms that not only function flawlessly but
+        also drive business goals.
       </p>
       <p>
-        I was responsible for building the primary websites for{" "}
+        At{" "}
         <Link
           href="https://efgh.xyz/"
-          target="_blank"
-          rel="noopener noreferrer"
           className="font-semibold transition-colors hover:text-zinc-500">
           EFGH
         </Link>
-        , a firm dedicated to creating embedded financial infrastructure, and
-        its flagship product,{" "}
+        , I built the primary web presence for the company and am part of the
+        team building its flagship product,{" "}
         <Link
           href="https://smesure.global"
-          target="_blank"
-          rel="noopener noreferrer"
           className="font-semibold transition-colors hover:text-zinc-500">
           SMEsure™
         </Link>
-        . My role extends beyond web development to include implementing
-        conversational chatbots and workflow automations that enhance user
-        engagement and improve operational efficiency.
+        . My work there went beyond development to include implementing workflow
+        automations and chatbots that significantly improved operational
+        efficiency and user engagement.
       </p>
       <p>
-        Outside of work, I enjoy running, exploring the outdoors, and diving
-        into non-fiction books to continually expand my knowledge and
-        perspective.
+        Outside of work, I&apos;m an avid runner and reader, always seeking new
+        challenges and perspectives whether I&apos;m on the trail or in the
+        pages of a book.
       </p>
       <p>
-        I am also available for{" "}
-        <Link
-          href="/#how-i-can-help"
-          className="font-semibold transition-colors hover:text-zinc-500">
-          freelance projects
-        </Link>
-        . If you have an idea you&apos;d like to bring to life,{" "}
+        I&apos;m currently seeking new freelance opportunities to help
+        businesses thrive. If you&apos;re looking for a dedicated developer to
+        build your next project,{" "}
         <Link
           href="/#get-in-touch"
           className="font-semibold transition-colors hover:text-zinc-500">
-          let&apos;s connect!
+          I&apos;d love to hear from you.
         </Link>
       </p>
     </div>

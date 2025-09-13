@@ -4,7 +4,7 @@ import Link from "@/components/common/link"
 
 const LandingProfileSection = () => {
   return (
-    <div className="flex max-w-[320px] flex-col items-center gap-2 text-center lg:max-w-[400px] lg:items-start lg:gap-4 lg:text-left">
+    <div className="flex max-w-[340px] flex-col items-center gap-2 text-center lg:max-w-[400px] lg:items-start lg:gap-4 lg:text-left">
       <div className="relative aspect-square w-full max-w-40 md:max-w-64 lg:max-w-96">
         <Image
           src="/images/lee-zong-han-avatar.webp"
@@ -21,17 +21,18 @@ const LandingProfileSection = () => {
       </div>
 
       <p className="text-pretty text-sm lg:text-base">
-        I&apos;m a full-stack developer driven to build products. I translate
-        complex requirements into robust solutions that solve user problems.
+        I partner with businesses and individuals to bring their digital ideas
+        to life.
       </p>
 
-      <p className="text-sm lg:text-base">
+      <p className="text-pretty text-sm lg:text-base">
+        Whether you&apos;re launching a new venture or scaling an existing one,
+        I can help.{" "}
         <Link
           href="/#get-in-touch"
           className="font-semibold transition-colors hover:text-zinc-500">
-          Let&apos;s connect
-        </Link>{" "}
-        and build something great together!
+          Let&apos;s discuss your project.
+        </Link>
       </p>
     </div>
   )

@@ -6,45 +6,45 @@ interface Service {
 
 const SERVICES_DATA: Service[] = [
   {
-    title: "Landing Pages",
+    title: "Bespoke Web Applications",
     description:
-      "High-converting landing pages to capture your audience's attention.",
+      "For when off-the-shelf software isn't enough. I architect and build custom applications from the ground up to solve your unique business challenges and streamline operations.",
     offerings: [
-      "Custom Design",
-      "SEO Optimisation",
-      "Responsive Design",
-      "Contact Forms"
+      "Full-Stack Architecture",
+      "Interactive Dashboards",
+      "User Authentication & Roles"
     ]
   },
   {
-    title: "E-commerce Shops",
-    description: "Complete e-commerce solutions to sell your products online.",
-    offerings: [
-      "Shopping Cart Integration",
-      "Payment Gateway Setup",
-      "Product Management",
-      "Secure Checkout"
-    ]
-  },
-  {
-    title: "Business Websites",
+    title: "Digital Presence & Marketing Sites",
     description:
-      "Professional websites to showcase your business and services.",
+      "I build fast, beautiful, and SEO-friendly websites that serve as the digital storefront for your brand, designed to convert visitors into loyal customers.",
     offerings: [
-      "Multi-page Layouts",
-      "Blogs & Articles",
-      "Content Management Systems (CMS)",
-      "Analytics Setup"
+      "CMS Integration",
+      "Performance Optimisation",
+      "Analytics Tracking"
     ]
   },
   {
-    title: "Custom Web Applications",
-    description: "Bespoke web applications tailored to your specific needs.",
+    title: "Appointment & Booking Systems",
+    description:
+      "Streamline your business with a custom booking platform. I develop intuitive scheduling experiences for your clients and a powerful admin dashboard for you to manage appointments and availability.",
     offerings: [
-      "Booking Systems",
-      "Internal Dashboards",
-      "API Integration",
-      "Database Design"
+      "Interactive Calendars",
+      "Admin Dashboard",
+      "Email Notifications",
+      "Payment Integration"
+    ]
+  },
+  {
+    title: "Application Modernisation & Support",
+    description:
+      "Is your existing website or application feeling slow, outdated, or difficult to manage? I help businesses modernise their tech, improve performance and security, and build a stable foundation for future growth.",
+    offerings: [
+      "Performance Audits",
+      "Legacy Code Refactor",
+      "Tech Stack Migration",
+      "Feature Development"
     ]
   }
 ]
