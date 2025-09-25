@@ -8,7 +8,7 @@ export const JsonLdPerson = () => {
     name: "Lee Zong Han",
     jobTitle: "Software Engineer",
     url: METADATA_WEBSITE.url,
-    image: `${METADATA_WEBSITE.url}/images/lee-zong-han-avatar.jpg`,
+    image: `${METADATA_WEBSITE.url}/images/lee-zong-han-avatar.webp`,
     sameAs: [
       "https://www.linkedin.com/in/lee-zong-han",
       "https://github.com/zonghanleezh"
