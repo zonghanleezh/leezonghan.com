@@ -119,7 +119,7 @@ const NavigationMenu = () => {
                 href={`/#${button.id}`}
                 onClick={(e) => handleNavigationButtonClick(e, button.id)}
                 className={cn(
-                  "whitespace-nowrap text-xs font-medium text-muted-foreground transition-colors sm:text-sm lg:text-base",
+                  "whitespace-nowrap text-sm font-medium text-muted-foreground transition-colors",
                   activeSection === `${button.id}` && "text-primary-foreground"
                 )}>
                 {button.name}
