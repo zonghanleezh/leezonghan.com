@@ -7,7 +7,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "bash .husky/pre-push"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -45,6 +58,8 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-tailwindcss": "^3.18.2",
     "eslint-plugin-unused-imports": "^4.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6",
     "postcss": "^8",
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
