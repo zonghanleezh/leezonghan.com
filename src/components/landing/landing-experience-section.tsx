@@ -12,7 +12,7 @@ const LandingExperienceSection = () => {
         <Link
           href="/docs/lee-zong-han-resume.pdf"
           target="_blank"
-          className="group w-fit text-sm font-medium transition-colors hover:text-red-600">
+          className="group w-fit text-sm font-medium transition-colors hover:text-primary">
           View Full Resume
           <ArrowUpRightIcon className="ml-1 inline-block size-4 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
         </Link>
@@ -26,13 +26,13 @@ const LandingExperienceSection = () => {
               key={experience.company}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-lg bg-zinc-100">
+              className="group rounded-lg bg-card">
               <div className="space-y-1 p-3 lg:space-y-2 lg:p-4">
                 <h3 className="font-semibold lg:text-lg">
                   <span>
                     {experience.title} ⋅ {experience.company}
                   </span>
-                  <ExternalLinkIcon className="ml-2 inline-block size-3 transition-all group-hover:text-red-600 lg:size-4" />
+                  <ExternalLinkIcon className="ml-2 inline-block size-3 transition-all group-hover:text-primary lg:size-4" />
                 </h3>
 
                 <p className="text-sm text-muted-foreground">

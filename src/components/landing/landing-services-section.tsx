@@ -12,7 +12,7 @@ const LandingServicesSection = () => {
         and improve efficiency. Let&apos;s work together to{" "}
         <Link
           href="/#get-in-touch"
-          className="font-semibold transition-colors hover:text-zinc-500">
+          className="font-semibold transition-colors hover:text-primary">
           build a solution tailored to your goals.
         </Link>
       </p>

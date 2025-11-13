@@ -105,21 +105,21 @@ const NavigationMenu = () => {
       <div className="relative">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex w-full gap-1.5 overflow-x-auto rounded-lg bg-zinc-300 p-1.5 md:justify-between">
+          className="scrollbar-hide flex w-full gap-1.5 overflow-x-auto rounded-lg bg-muted p-1.5 md:justify-between">
           {NAVIGATION_BUTTONS.map((button) => (
             <Button
               asChild
               key={button.id}
               variant="ghost"
               className={cn(
-                "w-full px-2 transition-colors hover:bg-zinc-800 hover:text-primary-foreground",
-                activeSection === `${button.id}` && "bg-zinc-800"
+                "w-full px-2 transition-colors hover:bg-primary hover:text-primary-foreground",
+                activeSection === `${button.id}` && "bg-primary"
               )}>
               <Link
                 href={`/#${button.id}`}
                 onClick={(e) => handleNavigationButtonClick(e, button.id)}
                 className={cn(
-                  "whitespace-nowrap text-xs font-medium text-zinc-600 transition-colors sm:text-sm lg:text-base",
+                  "whitespace-nowrap text-xs font-medium text-muted-foreground transition-colors sm:text-sm lg:text-base",
                   activeSection === `${button.id}` && "text-primary-foreground"
                 )}>
                 {button.name}
@@ -130,14 +130,14 @@ const NavigationMenu = () => {
         {/* Left fade */}
         <div
           className={cn(
-            "pointer-events-none absolute left-0 top-0 h-full w-8 rounded-l-lg bg-gradient-to-r from-zinc-300 to-transparent transition-opacity duration-300",
+            "pointer-events-none absolute left-0 top-0 h-full w-8 rounded-l-lg bg-gradient-to-r from-muted to-transparent transition-opacity duration-300",
             isOverflowing.left ? "opacity-100" : "opacity-0"
           )}
         />
         {/* Right fade */}
         <div
           className={cn(
-            "pointer-events-none absolute right-0 top-0 h-full w-8 rounded-r-lg bg-gradient-to-l from-zinc-300 to-transparent transition-opacity duration-300",
+            "pointer-events-none absolute right-0 top-0 h-full w-8 rounded-r-lg bg-gradient-to-l from-muted to-transparent transition-opacity duration-300",
             isOverflowing.right ? "opacity-100" : "opacity-0"
           )}
         />

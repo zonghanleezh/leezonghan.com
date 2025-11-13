@@ -14,14 +14,14 @@ const LandingAboutMeSection = () => {
         At{" "}
         <Link
           href="https://efgh.xyz/"
-          className="font-semibold transition-colors hover:text-zinc-500">
+          className="font-semibold transition-colors hover:text-primary">
           EFGH
         </Link>
         , I built the primary web presence for the company and am part of the
         team building its flagship product,{" "}
         <Link
           href="https://smesure.global"
-          className="font-semibold transition-colors hover:text-zinc-500">
+          className="font-semibold transition-colors hover:text-primary">
           SMEsure™
         </Link>
         . My work there went beyond development to include implementing workflow
@@ -39,7 +39,7 @@ const LandingAboutMeSection = () => {
         build your next project,{" "}
         <Link
           href="/#get-in-touch"
-          className="font-semibold transition-colors hover:text-zinc-500">
+          className="font-semibold transition-colors hover:text-primary">
           I&apos;d love to hear from you.
         </Link>
       </p>
