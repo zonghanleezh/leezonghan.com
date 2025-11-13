@@ -1,7 +1,6 @@
 import { ElementType } from "react"
 import { GithubIcon, LinkedinIcon } from "lucide-react"
 
-import { cn } from "@/lib/cn"
 import { Button } from "@/components/ui/button"
 import Link from "@/components/common/link"
 
