@@ -6,45 +6,47 @@ interface Service {
 
 const SERVICES_DATA: Service[] = [
   {
-    title: "Bespoke Web Applications",
+    title: "Custom Web Applications",
     description:
-      "For when off-the-shelf software isn't enough. I architect and build custom applications from the ground up to solve your unique business challenges and streamline operations.",
+      "Turn manual processes into automated workflows. I build scalable web applications that reduce operational costs, eliminate bottlenecks, and give you real-time visibility into your business.",
     offerings: [
-      "Full-Stack Architecture",
-      "Interactive Dashboards",
-      "User Authentication & Roles"
+      "Process automation & workflow tools",
+      "Real-time dashboards & reporting",
+      "Role-based access & permissions",
+      "API integrations with existing systems"
     ]
   },
   {
-    title: "Digital Presence & Marketing Sites",
+    title: "High-Converting Websites",
     description:
-      "I build fast, beautiful, and SEO-friendly websites that serve as the digital storefront for your brand, designed to convert visitors into loyal customers.",
+      "Get more leads and customers from your website. I design and build fast, mobile-optimised sites that rank well on search engines and turn visitors into revenue.",
     offerings: [
-      "CMS Integration",
-      "Performance Optimisation",
-      "Analytics Tracking"
+      "Conversion-focused design",
+      "SEO optimisation & fast loading",
+      "Content management systems",
+      "Analytics & performance tracking"
     ]
   },
   {
-    title: "Appointment & Booking Systems",
+    title: "Legacy System Modernisation",
     description:
-      "Streamline your business with a custom booking platform. I develop intuitive scheduling experiences for your clients and a powerful admin dashboard for you to manage appointments and availability.",
+      "Reduce maintenance costs and security risks. I modernise outdated applications to improve speed, reliability, and user experience while preserving your business logic.",
     offerings: [
-      "Interactive Calendars",
-      "Admin Dashboard",
-      "Email Notifications",
-      "Payment Integration"
+      "Performance & security audits",
+      "Modern tech stack migration",
+      "Code refactoring & optimisation",
+      "Incremental updates with zero downtime"
     ]
   },
   {
-    title: "Application Modernisation & Support",
+    title: "Technical Consulting & Strategy",
     description:
-      "Is your existing website or application feeling slow, outdated, or difficult to manage? I help businesses modernise their tech, improve performance and security, and build a stable foundation for future growth.",
+      "Make informed technology decisions. I provide expert guidance on architecture, scalability, and tech stack selection to ensure your projects are built on solid foundations.",
     offerings: [
-      "Performance Audits",
-      "Legacy Code Refactor",
-      "Tech Stack Migration",
-      "Feature Development"
+      "Technical architecture reviews",
+      "Stack selection & feasibility studies",
+      "Performance & scalability planning",
+      "Team augmentation & code reviews"
     ]
   }
 ]
