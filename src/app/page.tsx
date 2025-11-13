@@ -5,9 +5,7 @@ import LandingProfileSection from "@/components/landing/landing-profile-section"
 import LandingProjectsSection from "@/components/landing/landing-projects-section"
 import LandingServicesSection from "@/components/landing/landing-services-section"
 import Footer from "@/components/layout/footer"
-import LightDarkToggleButton from "@/components/light-dark-toggle-button"
 import NavigationMenu from "@/components/navigation-menu"
-import SocialButtons from "@/components/social-buttons"
 
 const COMMON_CLASSES = "scroll-mt-20 lg:scroll-mt-36"
 
@@ -17,11 +15,6 @@ const LandingPage = () => {
       {/* Left side */}
       <div className="flex flex-col items-center gap-2 pt-5 lg:sticky lg:top-12 lg:h-[calc(100vh-6rem)] lg:w-1/4 lg:items-start lg:gap-4">
         <LandingProfileSection />
-
-        <div className="flex gap-2">
-          <SocialButtons type="sidebar" />
-          <LightDarkToggleButton type="sidebar" />
-        </div>
       </div>
 
       {/* Right side */}
@@ -47,7 +40,9 @@ const LandingPage = () => {
             <LandingContactSection />
           </div>
 
-          <Footer />
+          <div className="sticky bottom-0 z-50">
+            <Footer />
+          </div>
         </div>
       </div>
     </div>

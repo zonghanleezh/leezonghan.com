@@ -18,11 +18,7 @@ import {
   SelectValue
 } from "@/components/ui/select"
 
-type ThemeSelectorProps = {
-  type: "footer" | "sidebar"
-}
-
-const ThemeSelector = ({ type }: ThemeSelectorProps) => {
+const ThemeSelector = () => {
   const [currentTheme, setCurrentTheme] = useState<ThemeName>(ACTIVE_THEME)
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
@@ -60,7 +56,7 @@ const ThemeSelector = ({ type }: ThemeSelectorProps) => {
       <>
         {/* Mobile: Just the icon button */}
         <Button
-          variant={type === "sidebar" ? "outline" : "ghost"}
+          variant="ghost"
           size="icon"
           aria-label="Loading theme"
           className="size-10 sm:hidden">
@@ -86,7 +82,7 @@ const ThemeSelector = ({ type }: ThemeSelectorProps) => {
         value={currentTheme}
         onValueChange={handleThemeChange}>
         <Button
-          variant={type === "sidebar" ? "outline" : "ghost"}
+          variant="ghost"
           size="icon"
           onClick={(e) => {
             e.preventDefault()

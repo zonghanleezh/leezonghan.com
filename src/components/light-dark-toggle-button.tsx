@@ -6,11 +6,7 @@ import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
 
-type LightDarkToggleButtonProps = {
-  type: "footer" | "sidebar"
-}
-
-const LightDarkToggleButton = ({ type }: LightDarkToggleButtonProps) => {
+const LightDarkToggleButton = () => {
   const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
@@ -22,7 +18,7 @@ const LightDarkToggleButton = ({ type }: LightDarkToggleButtonProps) => {
   if (!mounted) {
     return (
       <Button
-        variant={type === "sidebar" ? "outline" : "ghost"}
+        variant="ghost"
         size="icon"
         aria-label="Loading theme"
         className="size-10">
@@ -47,7 +43,7 @@ const LightDarkToggleButton = ({ type }: LightDarkToggleButtonProps) => {
 
   return (
     <Button
-      variant={type === "sidebar" ? "outline" : "ghost"}
+      variant="ghost"
       size="icon"
       onClick={toggleTheme}
       aria-label={

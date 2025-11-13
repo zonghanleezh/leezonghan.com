@@ -5,15 +5,15 @@ import ThemeSelector from "@/components/theme-selector"
 
 const Footer = () => {
   return (
-    <div className="flex flex-col gap-2">
-      <Separator className="sm:my-1" />
+    <div className="flex flex-col gap-2 bg-background pb-2">
+      <Separator className="" />
 
       {/* Mobile: Stack vertically */}
       <div className="flex flex-col items-center justify-center sm:hidden">
         <div className="flex items-center gap-1">
-          <SocialButtons type="footer" />
-          <LightDarkToggleButton type="footer" />
-          <ThemeSelector type="footer" />
+          <SocialButtons />
+          <LightDarkToggleButton />
+          <ThemeSelector />
         </div>
         <span className="text-xs text-muted-foreground">
           Lee Zong Han © {new Date().getFullYear()}
@@ -27,9 +27,9 @@ const Footer = () => {
         </span>
 
         <div className="flex">
-          <SocialButtons type="footer" />
-          <LightDarkToggleButton type="footer" />
-          <ThemeSelector type="footer" />
+          <SocialButtons />
+          <LightDarkToggleButton />
+          <ThemeSelector />
         </div>
       </div>
     </div>

@@ -11,10 +11,6 @@ interface SocialLink {
   url: string
 }
 
-type SocialButtonsProps = {
-  type: "footer" | "sidebar"
-}
-
 const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "linkedin",
@@ -28,13 +24,13 @@ const SOCIAL_LINKS: SocialLink[] = [
   }
 ]
 
-const SocialButtons = ({ type }: SocialButtonsProps) => {
+const SocialButtons = () => {
   return (
-    <div className={cn("flex", type === "sidebar" && "gap-2")}>
+    <div className="flex">
       {SOCIAL_LINKS.map(({ name, Icon, url }) => (
         <Button
           asChild
-          variant={type === "sidebar" ? "outline" : "ghost"}
+          variant="ghost"
           size="icon"
           className="size-10"
           key={name}>
