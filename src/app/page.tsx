@@ -24,19 +24,19 @@ const LandingPage = () => {
         </div>
 
         <div className="flex flex-col gap-6 lg:gap-10">
-          <div id="about-me" className={COMMON_CLASSES}>
+          <div id="about" className={COMMON_CLASSES}>
             <LandingAboutMeSection />
           </div>
-          <div id="how-i-can-help" className={COMMON_CLASSES}>
+          <div id="services" className={COMMON_CLASSES}>
             <LandingServicesSection />
           </div>
-          <div id="my-journey" className={COMMON_CLASSES}>
+          <div id="experience" className={COMMON_CLASSES}>
             <LandingExperienceSection />
           </div>
-          <div id="my-work" className={COMMON_CLASSES}>
+          <div id="projects" className={COMMON_CLASSES}>
             <LandingProjectsSection />
           </div>
-          <div id="get-in-touch" className={COMMON_CLASSES}>
+          <div id="contact" className={COMMON_CLASSES}>
             <LandingContactSection />
           </div>
 

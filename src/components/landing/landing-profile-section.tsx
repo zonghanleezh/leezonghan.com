@@ -29,7 +29,7 @@ const LandingProfileSection = () => {
         Whether you&apos;re launching a new venture or scaling an existing one,
         I can help.{" "}
         <Link
-          href="/#get-in-touch"
+          href="/#contact"
           className="font-semibold transition-colors hover:text-primary">
           Let&apos;s discuss your project.
         </Link>

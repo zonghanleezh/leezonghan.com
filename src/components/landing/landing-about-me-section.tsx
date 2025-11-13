@@ -38,7 +38,7 @@ const LandingAboutMeSection = () => {
         businesses thrive. If you&apos;re looking for a dedicated developer to
         build your next project,{" "}
         <Link
-          href="/#get-in-touch"
+          href="/#contact"
           className="font-semibold transition-colors hover:text-primary">
           I&apos;d love to hear from you.
         </Link>

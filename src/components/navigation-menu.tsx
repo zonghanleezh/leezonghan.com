@@ -14,23 +14,23 @@ interface NavigationButton {
 
 const NAVIGATION_BUTTONS: NavigationButton[] = [
   {
-    id: "about-me",
+    id: "about",
     name: "About Me"
   },
   {
-    id: "how-i-can-help",
+    id: "services",
     name: "How I Can Help"
   },
   {
-    id: "my-journey",
+    id: "experience",
     name: "My Journey"
   },
   {
-    id: "my-work",
+    id: "projects",
     name: "My Work"
   },
   {
-    id: "get-in-touch",
+    id: "contact",
     name: "Get In Touch"
   }
 ]

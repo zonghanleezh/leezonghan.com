@@ -11,7 +11,7 @@ const LandingServicesSection = () => {
         with you to build robust, user-centric applications that drive growth
         and improve efficiency. Let&apos;s work together to{" "}
         <Link
-          href="/#get-in-touch"
+          href="/#contact"
           className="font-semibold transition-colors hover:text-primary">
           build a solution tailored to your goals.
         </Link>
