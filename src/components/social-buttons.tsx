@@ -11,7 +11,7 @@ interface SocialLink {
   url: string
 }
 
-interface SocialButtonsProps {
+type SocialButtonsProps = {
   type: "footer" | "sidebar"
 }
 

@@ -11,6 +11,8 @@ import { IS_PROD } from "@/configs/env.config"
 import { JsonLdPerson } from "@/lib/structured-data/jsonld-person"
 import { Toaster } from "@/components/ui/sonner"
 import LayoutDefault from "@/components/layout/layout-default"
+import ThemeProvider from "@/components/providers/theme-provider"
+import ThemeScript from "@/components/providers/theme-script"
 import PosthogProvider from "@/components/trackers/posthog/posthog-provider"
 
 const ViewportIndicator = !IS_PROD
@@ -54,14 +56,15 @@ const SEOData = () => {
   )
 }
 
-export default function RootLayout({
+const RootLayout = ({
   children
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <ThemeScript />
         <SEOData />
       </head>
 
@@ -72,10 +75,14 @@ export default function RootLayout({
             gambetta.variable,
             "antialiased"
           )}>
-          <MainContent>{children}</MainContent>
-          <Toaster position="top-center" richColors />
+          <ThemeProvider>
+            <MainContent>{children}</MainContent>
+            <Toaster position="top-center" richColors />
+          </ThemeProvider>
         </body>
       </PosthogProvider>
     </html>
   )
 }
+
+export default RootLayout

@@ -4,7 +4,7 @@ import { useTheme } from "next-themes"
 import { Toaster as Sonner, ToasterProps } from "sonner"
 
 const Toaster = ({ ...props }: ToasterProps) => {
-  const { theme = "light" } = useTheme() // Update this to "system" when website supports dark mode
+  const { theme = "system" } = useTheme()
 
   return (
     <Sonner

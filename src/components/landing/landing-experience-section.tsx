@@ -26,7 +26,7 @@ const LandingExperienceSection = () => {
               key={experience.company}
               target="_blank"
               rel="noopener noreferrer"
-              className="group rounded-lg bg-card">
+              className="group rounded-lg border border-border bg-card">
               <div className="space-y-1 p-3 lg:space-y-2 lg:p-4">
                 <h3 className="font-semibold lg:text-lg">
                   <span>
