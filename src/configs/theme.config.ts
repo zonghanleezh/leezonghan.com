@@ -5,7 +5,7 @@ export type ThemeName =
   | "warm-neutral"
   | "neutral-gray"
   | "ruul-slate"
-  | "vintage-paper"
+  | "woodland-romance"
   | "campfire-orange"
   | "relato-crimson"
   | "wittl-lime"
@@ -106,61 +106,62 @@ const NEUTRAL_GRAY_THEME: Theme = {
   }
 }
 
-const VINTAGE_PAPER_THEME: Theme = {
-  name: "vintage-paper",
-  displayName: "Vintage Paper",
-  description: "Warm aged paper with forest green accents",
+const WOODLAND_ROMANCE_THEME: Theme = {
+  name: "woodland-romance",
+  displayName: "Woodland Romance",
+  description:
+    "Warm cream with forest green and terracotta accents - perfect for romantic outdoor weddings",
   light: {
-    background: "42 45% 94%",
-    foreground: "140 55% 20%",
-    card: "42 50% 96%",
-    cardForeground: "140 55% 20%",
-    popover: "42 50% 96%",
-    popoverForeground: "140 55% 20%",
-    primary: "140 55% 32%",
-    primaryForeground: "42 50% 98%",
-    secondary: "42 40% 88%",
-    secondaryForeground: "140 55% 25%",
-    muted: "42 35% 90%",
-    mutedForeground: "140 30% 40%",
-    accent: "140 55% 32%",
-    accentForeground: "42 50% 98%",
-    destructive: "0 84.2% 60.2%",
-    destructiveForeground: "0 0% 98%",
-    border: "42 25% 82%",
-    input: "42 30% 88%",
-    ring: "140 55% 32%",
-    chart1: "140 55% 35%",
-    chart2: "85 50% 42%",
-    chart3: "42 60% 52%",
-    chart4: "160 45% 38%",
-    chart5: "25 55% 48%"
+    background: "40 30% 96%",
+    foreground: "140 30% 20%",
+    card: "40 25% 98%",
+    cardForeground: "140 30% 20%",
+    popover: "40 25% 98%",
+    popoverForeground: "140 30% 20%",
+    primary: "140 35% 25%",
+    primaryForeground: "40 30% 96%",
+    secondary: "40 20% 92%",
+    secondaryForeground: "140 30% 20%",
+    muted: "40 15% 90%",
+    mutedForeground: "140 15% 45%",
+    accent: "15 55% 60%",
+    accentForeground: "40 30% 96%",
+    destructive: "0 70% 55%",
+    destructiveForeground: "40 30% 96%",
+    border: "40 20% 88%",
+    input: "40 20% 88%",
+    ring: "140 35% 25%",
+    chart1: "140 35% 25%",
+    chart2: "15 55% 60%",
+    chart3: "350 35% 75%",
+    chart4: "40 30% 96%",
+    chart5: "140 15% 45%"
   },
   dark: {
-    background: "35 30% 11%",
-    foreground: "42 40% 92%",
-    card: "35 30% 14%",
-    cardForeground: "42 40% 92%",
-    popover: "35 30% 14%",
-    popoverForeground: "42 40% 92%",
-    primary: "140 35% 45%",
-    primaryForeground: "42 50% 98%",
-    secondary: "35 25% 19%",
-    secondaryForeground: "42 35% 88%",
-    muted: "35 25% 19%",
-    mutedForeground: "42 25% 62%",
-    accent: "140 35% 45%",
-    accentForeground: "42 50% 98%",
-    destructive: "0 62.8% 30.6%",
-    destructiveForeground: "0 0% 98%",
-    border: "35 20% 24%",
-    input: "35 22% 23%",
-    ring: "140 35% 45%",
-    chart1: "140 35% 45%",
-    chart2: "85 38% 48%",
-    chart3: "42 50% 58%",
-    chart4: "160 32% 42%",
-    chart5: "25 45% 52%"
+    background: "140 20% 12%",
+    foreground: "40 30% 92%",
+    card: "140 20% 15%",
+    cardForeground: "40 30% 92%",
+    popover: "140 20% 15%",
+    popoverForeground: "40 30% 92%",
+    primary: "140 30% 70%",
+    primaryForeground: "140 30% 10%",
+    secondary: "140 15% 20%",
+    secondaryForeground: "40 30% 92%",
+    muted: "140 15% 22%",
+    mutedForeground: "40 15% 65%",
+    accent: "15 55% 50%",
+    accentForeground: "40 30% 96%",
+    destructive: "0 65% 45%",
+    destructiveForeground: "40 30% 96%",
+    border: "140 15% 25%",
+    input: "140 15% 25%",
+    ring: "140 30% 70%",
+    chart1: "140 30% 70%",
+    chart2: "15 55% 50%",
+    chart3: "350 30% 60%",
+    chart4: "40 30% 92%",
+    chart5: "140 15% 45%"
   }
 }
 
@@ -694,7 +695,7 @@ export const THEMES: Record<ThemeName, Theme> = {
   "warm-neutral": WARM_NEUTRAL_THEME,
   "neutral-gray": NEUTRAL_GRAY_THEME,
   "ruul-slate": RUUL_SLATE_THEME,
-  "vintage-paper": VINTAGE_PAPER_THEME,
+  "woodland-romance": WOODLAND_ROMANCE_THEME,
   "campfire-orange": CAMPFIRE_ORANGE_THEME,
   "relato-crimson": RELATO_CRIMSON_THEME,
   "wittl-lime": WITTL_LIME_THEME,
