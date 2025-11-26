@@ -4,6 +4,7 @@ import LandingExperienceSection from "@/components/landing/landing-experience-se
 import LandingProfileSection from "@/components/landing/landing-profile-section"
 import LandingProjectsSection from "@/components/landing/landing-projects-section"
 import LandingServicesSection from "@/components/landing/landing-services-section"
+import LandingTestimonialsSection from "@/components/landing/landing-testimonials-section"
 import Footer from "@/components/layout/footer"
 import NavigationMenu from "@/components/navigation-menu"
 
@@ -35,6 +36,9 @@ const LandingPage = () => {
           </div>
           <div id="projects" className={COMMON_CLASSES}>
             <LandingProjectsSection />
+          </div>
+          <div id="testimonials" className={COMMON_CLASSES}>
+            <LandingTestimonialsSection />
           </div>
           <div id="contact" className={COMMON_CLASSES}>
             <LandingContactSection />

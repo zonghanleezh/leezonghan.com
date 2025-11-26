@@ -12,7 +12,7 @@ const LandingServicesSection = () => {
         and improve efficiency. Let&apos;s work together to{" "}
         <Link
           href="/#contact"
-          className="font-semibold transition-colors hover:text-primary">
+          className="font-semibold text-primary transition-colors hover:text-accent">
           build a solution tailored to your goals.
         </Link>
       </p>
@@ -23,7 +23,11 @@ const LandingServicesSection = () => {
             key={service.title}
             className="flex flex-col gap-2 rounded-lg border p-3 lg:p-4">
             <h3 className="font-semibold lg:text-lg">{service.title}</h3>
-            <p className="text-sm">{service.description}</p>
+            {service.description.map((desc, index) => (
+              <p key={index} className="text-sm">
+                {desc}
+              </p>
+            ))}
 
             <div className="mt-auto flex flex-wrap gap-1.5">
               {service.offerings.map((offering) => (

@@ -30,6 +30,10 @@ const NAVIGATION_BUTTONS: NavigationButton[] = [
     name: "My Work"
   },
   {
+    id: "testimonials",
+    name: "Testimonials"
+  },
+  {
     id: "contact",
     name: "Get In Touch"
   }

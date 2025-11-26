@@ -17,6 +17,13 @@ import {
   FormMessage
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 
 const LandingContactFormSchema = z.object({
@@ -24,6 +31,9 @@ const LandingContactFormSchema = z.object({
   emailAddress: z
     .email("Please provide a valid email address.")
     .min(1, "An email address is required to get in touch."),
+  serviceInterest: z.string().min(1, "Please select a service."),
+  budgetRange: z.string().min(1, "Please select a budget range."),
+  timeline: z.string().min(1, "Please select a timeline."),
   message: z
     .string()
     .min(20, "Please tell me a little more about your project or opportunity.")
@@ -31,7 +41,7 @@ const LandingContactFormSchema = z.object({
 
 type LandingContactFormSchemaType = z.infer<typeof LandingContactFormSchema>
 
-const FIELD_CLASSES = "text-sm font-medium"
+const FIELD_CLASSES = "text-sm font-medium w-full"
 
 const LandingContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -41,6 +51,9 @@ const LandingContactForm = () => {
     defaultValues: {
       fullName: "",
       emailAddress: "",
+      serviceInterest: "",
+      budgetRange: "",
+      timeline: "",
       message: ""
     }
   })
@@ -94,6 +107,85 @@ const LandingContactForm = () => {
                   {...field}
                 />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="serviceInterest"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>What service are you interested in?</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger className={FIELD_CLASSES}>
+                    <SelectValue placeholder="Select a service" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="landing-page">
+                    Landing Page / Website
+                  </SelectItem>
+                  <SelectItem value="blog-cms">Blog with CMS</SelectItem>
+                  <SelectItem value="ecommerce">
+                    E-commerce / Online Store
+                  </SelectItem>
+                  <SelectItem value="seo">SEO Optimisation</SelectItem>
+                  <SelectItem value="multiple">Multiple Services</SelectItem>
+                  <SelectItem value="not-sure">
+                    Not sure - let&apos;s discuss
+                  </SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="budgetRange"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Budget Range</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger className={FIELD_CLASSES}>
+                    <SelectValue placeholder="Select your budget range" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="under-3k">Under $3,000</SelectItem>
+                  <SelectItem value="3k-7k">$3,000 - $7,000</SelectItem>
+                  <SelectItem value="7k-15k">$7,000 - $15,000</SelectItem>
+                  <SelectItem value="15k-plus">$15,000+</SelectItem>
+                  <SelectItem value="discuss">Prefer to discuss</SelectItem>
+                </SelectContent>
+              </Select>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="timeline"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>When do you need this?</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger className={FIELD_CLASSES}>
+                    <SelectValue placeholder="Select your timeline" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="asap">ASAP (&lt; 1 month)</SelectItem>
+                  <SelectItem value="1-2-months">1-2 months</SelectItem>
+                  <SelectItem value="3-6-months">3-6 months</SelectItem>
+                  <SelectItem value="exploring">Just exploring</SelectItem>
+                  <SelectItem value="flexible">Flexible</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}

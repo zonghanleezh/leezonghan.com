@@ -14,12 +14,18 @@ import {
 interface ContactFormEmailProps {
   fullName: string
   emailAddress: string
+  serviceInterest: string
+  budgetRange?: string
+  timeline?: string
   message: string
 }
 
 const EmailTemplate = ({
   fullName,
   emailAddress,
+  serviceInterest,
+  budgetRange,
+  timeline,
   message
 }: ContactFormEmailProps) => (
   <Html>
@@ -42,6 +48,19 @@ const EmailTemplate = ({
               {emailAddress}
             </a>
           </Text>
+          <Text style={paragraph}>
+            <strong>Service Interest:</strong> {serviceInterest}
+          </Text>
+          {budgetRange && (
+            <Text style={paragraph}>
+              <strong>Budget Range:</strong> {budgetRange}
+            </Text>
+          )}
+          {timeline && (
+            <Text style={paragraph}>
+              <strong>Timeline:</strong> {timeline}
+            </Text>
+          )}
           <Hr style={hr} />
           <Heading as="h2" style={subheading}>
             Message:

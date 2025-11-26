@@ -5,41 +5,49 @@ const LandingAboutMeSection = () => {
     <div className="flex flex-col gap-3 text-sm lg:text-base">
       <h2 className="text-xl font-semibold lg:text-2xl">About Me</h2>
       <p>
-        I&apos;m a software developer who builds impactful digital solutions for
-        fintechs and startups. My expertise lies in taking projects from concept
-        to deployment, creating platforms that not only function flawlessly but
-        also drive business goals.
+        I&apos;m a freelance web developer who helps businesses grow through
+        strategic website development. I specialise in building landing pages
+        that convert, blogs that engage, and e-commerce platforms that sell—all
+        optimised for search engines and designed to drive results.
       </p>
       <p>
-        At{" "}
+        From concept to launch, I handle everything: responsive design, CMS
+        integration so you can manage content yourself, payment processing for
+        online sales, and SEO optimisation to get found on Google. My clients
+        get professional websites that work on all devices and actually
+        contribute to their bottom line.
+      </p>
+      <p>
+        I&apos;m currently a software engineer at{" "}
         <Link
           href="https://efgh.xyz/"
-          className="font-semibold transition-colors hover:text-primary">
+          target="_blank"
+          className="font-semibold text-primary transition-colors hover:text-accent">
           EFGH
-        </Link>
-        , I built the primary web presence for the company and am part of the
-        team building its flagship product,{" "}
+        </Link>{" "}
+        developing insurance platforms, and take on select freelance projects in
+        the evenings and weekends. Recent work includes{" "}
         <Link
-          href="https://smesure.global"
-          className="font-semibold transition-colors hover:text-primary">
-          SMEsure™
+          href="https://thevowcarriage.com"
+          target="_blank"
+          className="font-semibold text-primary transition-colors hover:text-accent">
+          The Vow Carriage
         </Link>
-        . My work there went beyond development to include implementing workflow
-        automations and chatbots that significantly improved operational
-        efficiency and user engagement.
+        , a conversion-focused wedding car rental site with Sanity CMS
+        integration and comprehensive SEO implementation.
       </p>
       <p>
-        Outside of work, I&apos;m an avid runner and reader, always seeking new
-        challenges and perspectives whether I&apos;m on the trail or in the
+        Outside of coding, I&apos;m an avid runner and reader, always seeking
+        new challenges and perspectives whether I&apos;m on the trail or in the
         pages of a book.
       </p>
       <p>
-        I&apos;m currently seeking new freelance opportunities to help
-        businesses thrive. If you&apos;re looking for a dedicated developer to
-        build your next project,{" "}
+        I&apos;m currently accepting new freelance projects. If you need a
+        landing page that converts, a blog you can manage yourself, an online
+        store, or SEO optimisation—
         <Link
           href="/#contact"
-          className="font-semibold transition-colors hover:text-primary">
+          className="font-semibold text-primary transition-colors hover:text-accent">
           I&apos;d love to hear from you.
         </Link>
       </p>

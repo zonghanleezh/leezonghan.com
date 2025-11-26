@@ -4,19 +4,17 @@ interface Experience {
   date: string
   paragraphs: string[]
   url: string
-  badges: string[]
 }
 
 export const EXPERIENCES_DATA: Experience[] = [
   {
     title: "Software Engineer",
-    company: "Embed Financial Group Holdings (EFGH)",
+    company: "Embed Financial Group Holdings",
     date: "Mar 2025 — Present",
     paragraphs: [
-      "On a mission to support the underinsured and underprivileged."
+      "Building the Finternet for inclusive insurance and inclusive finance."
     ],
-    url: "https://efgh.xyz/",
-    badges: ["Next.js", "Django", "AWS", "Anything that solves the problem"]
+    url: "https://efgh.xyz/"
   },
   {
     title: "Software Engineer",
@@ -26,8 +24,7 @@ export const EXPERIENCES_DATA: Experience[] = [
       "A strategic intiative wholly-owned by TransAsia Private Capital.",
       "Led the business requirements gathering to define the MVP scope. Collaborated with the CTO to shape the platform's technical architecture. Designed the NoSQL database to handle scalable, client relationship management and real-time supply chain financing data."
     ],
-    url: "https://capata.sg/",
-    badges: ["Next.js", "MongoDB", "Figma"]
+    url: "https://capata.sg/"
   },
   {
     title: "Software Engineer",
@@ -36,8 +33,7 @@ export const EXPERIENCES_DATA: Experience[] = [
     paragraphs: [
       "Designed, built and launched a full-stack private debt investment management platform. Implemented asynchronous trade booking for concurrent processing and developed real-time reporting features for bookkeeping and client relationship management."
     ],
-    url: "https://taprivatecapital.com/",
-    badges: ["React", "Express", "Node.js", "MongoDB", "Docker"]
+    url: "https://taprivatecapital.com/"
   },
   {
     title: "Data Analyst",
@@ -46,7 +42,6 @@ export const EXPERIENCES_DATA: Experience[] = [
     paragraphs: [
       "Developed python scripts to execute database queries, create reports and automate distribution to stakeholders."
     ],
-    url: "https://micron.com/",
-    badges: ["Python", "SQL"]
+    url: "https://micron.com/"
   }
 ]

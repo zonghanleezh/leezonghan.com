@@ -30,7 +30,7 @@ const LandingProfileSection = () => {
         I can help.{" "}
         <Link
           href="/#contact"
-          className="font-semibold transition-colors hover:text-primary">
+          className="font-semibold text-primary transition-colors hover:text-accent">
           Let&apos;s discuss your project.
         </Link>
       </p>

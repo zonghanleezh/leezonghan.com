@@ -28,11 +28,11 @@ const LandingExperienceSection = () => {
               rel="noopener noreferrer"
               className="group rounded-lg border border-border bg-card">
               <div className="space-y-1 p-3 lg:space-y-2 lg:p-4">
-                <h3 className="font-semibold lg:text-lg">
+                <h3 className="group flex items-center gap-2 font-semibold lg:text-lg">
                   <span>
                     {experience.title} ⋅ {experience.company}
                   </span>
-                  <ExternalLinkIcon className="ml-2 inline-block size-3 transition-all group-hover:text-primary lg:size-4" />
+                  <ExternalLinkIcon className="size-3 shrink-0 transition-all group-hover:translate-x-0.5 group-hover:scale-105 group-hover:text-primary lg:size-4" />
                 </h3>
 
                 <p className="text-sm text-muted-foreground">

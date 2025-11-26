@@ -1,52 +1,48 @@
 interface Service {
   title: string
-  description: string
+  description: string[]
   offerings: string[]
 }
 
 const SERVICES_DATA: Service[] = [
   {
-    title: "Custom Web Applications",
-    description:
-      "Turn manual processes into automated workflows. I build scalable web applications that reduce operational costs, eliminate bottlenecks, and give you real-time visibility into your business.",
+    title: "Landing Pages & Conversion-Focused Websites",
+    description: [
+      "Get more leads and customers from your website. I design and build fast, mobile-optimised landing pages and websites that convert visitors into paying customers through strategic design, compelling copy placement, and seamless user experiences.",
+      "For The Vow Carriage, I built a conversion-focused wedding car rental website with WhatsApp integration, enabling 24/7 customer inquiries and professional brand presentation."
+    ],
     offerings: [
-      "Process automation & workflow tools",
-      "Real-time dashboards & reporting",
-      "Role-based access & permissions",
-      "API integrations with existing systems"
+      "Device-responsive",
+      "Conversion optimisation",
+      "Email notifications",
+      "CRM integration",
+      "Contact forms"
     ]
   },
   {
-    title: "High-Converting Websites",
-    description:
-      "Get more leads and customers from your website. I design and build fast, mobile-optimised sites that rank well on search engines and turn visitors into revenue.",
+    title: "Blogs & Content Management Systems",
+    description: [
+      "Take control of your content without technical knowledge. I build user-friendly blogs and CMS solutions that let you publish, edit, and manage content yourself—no developer needed for updates.",
+      "The Vow Carriage uses Sanity CMS for their blog, allowing them to publish wedding tips and company updates without any coding knowledge."
+    ],
     offerings: [
-      "Conversion-focused design",
-      "SEO optimisation & fast loading",
-      "Content management systems",
-      "Analytics & performance tracking"
+      "Headless CMS integration",
+      "Rich text editor",
+      "Custom blog with categories and search",
+      "SEO-friendly metadata management"
     ]
   },
   {
-    title: "Legacy System Modernisation",
-    description:
-      "Reduce maintenance costs and security risks. I modernise outdated applications to improve speed, reliability, and user experience while preserving your business logic.",
+    title: "SEO & Performance Optimisation",
+    description: [
+      "Get found on Google and keep visitors engaged. I optimise websites for search engines and performance, improving your rankings, loading speed, and overall user experience to drive more organic traffic.",
+      "The Vow Carriage's website was optimised for SEO and performance, resulting in faster load times and better search engine visibility."
+    ],
     offerings: [
-      "Performance & security audits",
-      "Modern tech stack migration",
-      "Code refactoring & optimisation",
-      "Incremental updates with zero downtime"
-    ]
-  },
-  {
-    title: "Technical Consulting & Strategy",
-    description:
-      "Make informed technology decisions. I provide expert guidance on architecture, scalability, and tech stack selection to ensure your projects are built on solid foundations.",
-    offerings: [
-      "Technical architecture reviews",
-      "Stack selection & feasibility studies",
-      "Performance & scalability planning",
-      "Team augmentation & code reviews"
+      "SEO audits and implementation",
+      "Sitemap configuration",
+      "Mobile-friendly and responsive design",
+      "Google Business Profile integration"
     ]
   }
 ]
