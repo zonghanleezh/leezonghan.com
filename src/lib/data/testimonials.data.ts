@@ -1,3 +1,6 @@
+import { StaticImageData } from "next/image"
+import TheVowCarriageLogo from "@/assets/testimonials/the-vow-carriage-logo.webp"
+
 interface Testimonial {
   quote: string
   author: string
@@ -5,7 +8,8 @@ interface Testimonial {
   company: string
   projectType: string
   serviceProvided: string[]
-  companyUrl?: string
+  companyUrl: string
+  logo: StaticImageData
 }
 
 const TESTIMONIALS_DATA: Testimonial[] = [
@@ -17,7 +21,8 @@ const TESTIMONIALS_DATA: Testimonial[] = [
     company: "The Vow Carriage",
     projectType: "Wedding Car Rental Website",
     serviceProvided: ["Landing Pages", "Blog with CMS", "SEO Optimisation"],
-    companyUrl: "https://thevowcarriage.com"
+    companyUrl: "https://thevowcarriage.com",
+    logo: TheVowCarriageLogo
   }
 ]
 

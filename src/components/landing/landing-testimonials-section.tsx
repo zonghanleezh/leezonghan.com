@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { QuoteIcon } from "lucide-react"
 
 import TESTIMONIALS_DATA from "@/lib/data/testimonials.data"
@@ -16,43 +17,37 @@ const LandingTestimonialsSection = () => {
             className="relative flex flex-col gap-4 rounded-lg border bg-muted/20 p-4 lg:p-6">
             <QuoteIcon className="absolute right-4 top-4 size-8 text-muted-foreground/20 lg:size-10" />
 
-            <div className="relative">
-              <p className="text-sm italic leading-relaxed lg:text-base">
-                &quot;{testimonial.quote}&quot;
-              </p>
+            <p className="text-sm italic leading-relaxed lg:text-base">
+              &quot;{testimonial.quote}&quot;
+            </p>
+            <div className="flex items-start gap-3">
+              <Image
+                src={testimonial.logo}
+                alt={`${testimonial.company} logo`}
+                className="size-12 rounded"
+              />
+              <div className="flex flex-col gap-1">
+                <p className="font-semibold">{testimonial.author}</p>
+                <p className="text-sm text-muted-foreground">
+                  {testimonial.role} at{" "}
+                  {testimonial.companyUrl ? (
+                    <Link
+                      href={testimonial.companyUrl}
+                      className="transition-colors hover:text-primary">
+                      {testimonial.company}
+                    </Link>
+                  ) : (
+                    testimonial.company
+                  )}{" "}
+                  • {testimonial.projectType}
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <div className="flex flex-col gap-1">
-                <p className="font-semibold">
-                  {testimonial.author}
-                  {testimonial.companyUrl ? (
-                    <>
-                      {" "}
-                      •{" "}
-                      <Link
-                        href={testimonial.companyUrl}
-                        className="font-normal text-muted-foreground transition-colors hover:text-primary">
-                        {testimonial.company}
-                      </Link>
-                    </>
-                  ) : (
-                    <span className="font-normal text-muted-foreground">
-                      {" "}
-                      • {testimonial.company}
-                    </span>
-                  )}
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  {testimonial.role} • {testimonial.projectType}
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-1.5">
-                {testimonial.serviceProvided.map((service) => (
-                  <Badge key={service} text={service} />
-                ))}
-              </div>
+            <div className="flex flex-wrap gap-1.5">
+              {testimonial.serviceProvided.map((service) => (
+                <Badge key={service} text={service} />
+              ))}
             </div>
           </div>
         ))}
