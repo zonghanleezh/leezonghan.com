@@ -15,7 +15,7 @@ interface Testimonial {
 const TESTIMONIALS_DATA: Testimonial[] = [
   {
     quote:
-      "Zong Han built our wedding car rental website from concept to launch. His attention to detail and understanding of our business needs resulted in a beautiful, conversion-focused site that our customers love. The CMS integration means we can easily update our blog without any coding knowledge.",
+      "We approached Zong Han with a brief concept and he helped bring it to life. His attention to detail and understanding of our business needs resulted in a beautiful site that our customers love. With a CMS, we are able to easily update our blog. Zong Han was professional, communicative, and delivered on time. Highly recommended!",
     author: "Tan Xuan You",
     role: "Founder",
     company: "The Vow Carriage",
