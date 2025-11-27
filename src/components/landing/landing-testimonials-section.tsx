@@ -20,7 +20,7 @@ const LandingTestimonialsSection = () => {
             <p className="text-sm italic leading-relaxed lg:text-base">
               &quot;{testimonial.quote}&quot;
             </p>
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
               <Image
                 src={testimonial.logo}
                 alt={`${testimonial.company} logo`}
