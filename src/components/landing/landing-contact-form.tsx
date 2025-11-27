@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import { z } from "zod"
 
+import { PRICING_DATA } from "@/lib/data/pricing.data"
+import { TIMELINE_DATA } from "@/lib/data/timeline.data"
 import { sendEmail } from "@/lib/sendEmail"
 import { Button } from "@/components/ui/button"
 import {
@@ -155,11 +157,9 @@ const LandingContactForm = () => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="under-3k">Under $3,000</SelectItem>
-                  <SelectItem value="3k-7k">$3,000 - $7,000</SelectItem>
-                  <SelectItem value="7k-15k">$7,000 - $15,000</SelectItem>
-                  <SelectItem value="15k-plus">$15,000+</SelectItem>
-                  <SelectItem value="discuss">Prefer to discuss</SelectItem>
+                  {PRICING_DATA.map((item) => (
+                    <SelectItem value={item.slug}>{item.title}</SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />
@@ -179,11 +179,9 @@ const LandingContactForm = () => {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="asap">ASAP (&lt; 1 month)</SelectItem>
-                  <SelectItem value="1-2-months">1-2 months</SelectItem>
-                  <SelectItem value="3-6-months">3-6 months</SelectItem>
-                  <SelectItem value="exploring">Just exploring</SelectItem>
-                  <SelectItem value="flexible">Flexible</SelectItem>
+                  {TIMELINE_DATA.map((item) => (
+                    <SelectItem value={item.slug}>{item.title}</SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
               <FormMessage />

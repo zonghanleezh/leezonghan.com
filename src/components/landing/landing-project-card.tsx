@@ -99,8 +99,8 @@ const LandingProjectCard = ({
               className={cn(
                 "h-2 rounded-full transition-all",
                 current === index
-                  ? "w-6 bg-primary"
-                  : "w-2 bg-primary/50 hover:bg-primary/75"
+                  ? "w-6 bg-black"
+                  : "w-2 bg-black/50 hover:bg-black/75"
               )}
               aria-label={`Go to image ${index + 1}`}
             />
