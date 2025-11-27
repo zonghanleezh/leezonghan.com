@@ -21,7 +21,7 @@ const PROJECTS_DATA: Project[] = [
   {
     title: "The Vow Carriage - Wedding Car Rental Platform",
     description:
-      "A conversion-focused wedding car rental website featuring dual-theme system, dynamic pricing packages, blog integration with Sanity CMS, and comprehensive SEO implementation with Schema.org markup.",
+      "A conversion-focused wedding car rental website featuring, dynamic pricing packages, blog integration with Sanity CMS, and comprehensive SEO implementation with Schema.org markup.",
     challenge:
       "Small family-run business needed online presence to compete with larger wedding car rental companies while staying within budget.",
     solution:
@@ -53,7 +53,6 @@ const PROJECTS_DATA: Project[] = [
     techHighlights: [
       "Vector search implementation using OpenAI embeddings",
       "Full-text search with PostgreSQL for fast querying",
-      "Command palette interface for power users",
       "RAG (Retrieval-Augmented Generation) for contextual responses"
     ],
     techStack: ["Next.js", "TypeScript", "PostgreSQL", "OpenAI API"],
@@ -70,13 +69,10 @@ const PROJECTS_DATA: Project[] = [
     impact: [
       "Eliminated manual trade booking delays with async processing",
       "Reduced reporting time from hours to minutes with real-time dashboards",
-      "Enabled team scalability with role-based access controls",
-      "Improved data accuracy through automated workflows"
+      "Enabled team scalability with role-based access controls"
     ],
     techHighlights: [
-      "MongoDB for flexible document structure",
       "Express.js REST API architecture",
-      "React frontend with real-time updates",
       "Role-based authorisation for secure access control"
     ],
     techStack: ["React", "Node.js", "Express.js", "MongoDB"],
