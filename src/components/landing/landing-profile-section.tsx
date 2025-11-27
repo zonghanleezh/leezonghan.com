@@ -19,7 +19,7 @@ const LandingProfileSection = () => {
         <h1 className="text-3xl font-semibold lg:text-4xl">Lee Zong Han</h1>
         <h2 className="text-lg lg:text-xl">Software Engineer</h2>
         <div className="my-2 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent lg:my-0 lg:text-sm">
-          <span className="size-1.5 animate-pulse rounded-full bg-accent"></span>
+          <span className="size-1.5 animate-pulse rounded-full bg-accent" />
           Available for new projects
         </div>
       </div>
