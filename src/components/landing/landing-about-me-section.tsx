@@ -25,8 +25,8 @@ const LandingAboutMeSection = () => {
           className="font-semibold text-primary transition-colors hover:text-accent">
           EFGH
         </Link>{" "}
-        developing insurance platforms, and take on select freelance projects in
-        the evenings and weekends. Recent work includes{" "}
+        developing full-stack tools and applications, and take on select
+        freelance projects in the evenings and weekends. Recent work includes{" "}
         <Link
           href="https://thevowcarriage.com"
           target="_blank"
@@ -41,16 +41,18 @@ const LandingAboutMeSection = () => {
         new challenges and perspectives whether I&apos;m on the trail or in the
         pages of a book.
       </p>
-      <p>
-        I&apos;m currently accepting new freelance projects. If you need a
-        landing page that converts, a blog you can manage yourself, an online
-        store, or SEO optimisation—
-        <Link
-          href="/#contact"
-          className="font-semibold text-primary transition-colors hover:text-accent">
-          I&apos;d love to hear from you.
-        </Link>
-      </p>
+      <div className="mt-2 rounded-lg border-l-4 border-accent bg-accent/5 p-4">
+        <p className="text-sm lg:text-base">
+          I&apos;m currently accepting new freelance projects. If you need a
+          landing page that converts, a blog you can manage yourself, an online
+          store, or SEO optimisation—
+          <Link
+            href="/#contact"
+            className="font-semibold text-primary transition-colors hover:text-accent">
+            I&apos;d love to hear from you.
+          </Link>
+        </p>
+      </div>
     </div>
   )
 }
