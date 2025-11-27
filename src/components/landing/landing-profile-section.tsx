@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import Link from "@/components/common/link"
+import LandingProfileBadge from "@/components/landing/landing-profile-badge"
 
 const LandingProfileSection = () => {
   return (
@@ -18,10 +19,7 @@ const LandingProfileSection = () => {
       <div className="mt-2 lg:space-y-3">
         <h1 className="text-3xl font-semibold lg:text-4xl">Lee Zong Han</h1>
         <h2 className="text-lg lg:text-xl">Software Engineer</h2>
-        <div className="my-2 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1.5 text-xs font-medium text-accent lg:my-0 lg:text-sm">
-          <span className="size-1.5 animate-pulse rounded-full bg-accent" />
-          Available for new projects
-        </div>
+        <LandingProfileBadge />
       </div>
 
       <p className="text-pretty text-sm lg:text-base">
