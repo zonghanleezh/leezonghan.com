@@ -1,112 +1,100 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import Image, { StaticImageData } from "next/image"
+import { useState } from "react"
+import { ChevronDown, ExternalLink } from "lucide-react"
 
 import { cn } from "@/lib/cn"
-import {
-  Carousel,
-  CarouselApi,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from "@/components/ui/carousel"
+import { Project } from "@/lib/data/projects.data"
+import Badge from "@/components/common/badge"
 import Link from "@/components/common/link"
+import LandingProjectImageCarousel from "@/components/landing/landing-project-image-carousel"
 
-interface LandingProjectCardProps {
-  imageUrls: StaticImageData[]
-  title: string
-  url?: string
-}
+const LandingProjectCard = ({ project }: { project: Project }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
 
-const LandingProjectCard = ({
-  imageUrls,
-  title,
-  url
-}: LandingProjectCardProps) => {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    if (!api) return
-
-    setCurrent(api.selectedScrollSnap())
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap())
-    })
-  }, [api])
-
-  // Single image - no carousel
-  if (imageUrls.length === 1) {
-    const imageUrl = imageUrls[0]
-    return url ? (
-      <Link
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block">
-        <Image
-          src={imageUrl}
-          alt={title}
-          className="rounded-lg border transition-opacity hover:opacity-80"
-        />
-      </Link>
-    ) : (
-      <Image src={imageUrl} alt={title} className="rounded-lg border" />
-    )
-  }
-
-  // Multiple images - use carousel
   return (
-    <div className="relative">
-      <Carousel className="w-full" setApi={setApi}>
-        <CarouselContent>
-          {imageUrls.map((imageUrl, index) => (
-            <CarouselItem key={index}>
-              {url ? (
-                <Link
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block">
-                  <Image
-                    src={imageUrl}
-                    alt={`${title} - Image ${index + 1}`}
-                    className="rounded-lg border transition-opacity hover:opacity-80"
-                  />
-                </Link>
-              ) : (
-                <Image
-                  src={imageUrl}
-                  alt={`${title} - Image ${index + 1}`}
-                  className="rounded-lg border"
-                />
-              )}
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="left-2" />
-        <CarouselNext className="right-2" />
-      </Carousel>
-      {imageUrls.length > 1 && (
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-1.5">
-          {imageUrls.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => api?.scrollTo(index)}
-              className={cn(
-                "h-2 rounded-full transition-all",
-                current === index
-                  ? "w-6 bg-black"
-                  : "w-2 bg-black/50 hover:bg-black/75"
-              )}
-              aria-label={`Go to image ${index + 1}`}
-            />
+    <div className="flex flex-col gap-4 rounded-lg border p-3 lg:p-4">
+      <LandingProjectImageCarousel
+        imageUrls={project.imageUrls}
+        title={project.title}
+        url={project.url}
+      />
+
+      <div className="flex flex-col gap-3 lg:gap-4">
+        <div>
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="font-semibold lg:text-lg">{project.title}</h3>
+            {project.url && (
+              <Link
+                href={project.url}
+                className="shrink-0 text-muted-foreground transition-colors hover:text-primary">
+                <ExternalLink className="size-4" />
+              </Link>
+            )}
+          </div>
+          <p className="mt-2 text-sm">{project.description}</p>
+        </div>
+
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex w-fit items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80 md:hidden">
+          {isExpanded ? "Hide Details" : "View Details"}
+          <ChevronDown
+            className={cn(
+              "size-4 transition-transform duration-300",
+              isExpanded && "rotate-180"
+            )}
+          />
+        </button>
+
+        <div
+          className={cn(
+            "flex-col gap-3 lg:gap-4",
+            isExpanded ? "flex" : "hidden md:flex"
+          )}>
+          {project.challenge && (
+            <div className="text-sm">
+              <p className="font-semibold">Challenge:</p>
+              <p className="text-muted-foreground">{project.challenge}</p>
+            </div>
+          )}
+
+          {project.solution && (
+            <div className="text-sm">
+              <p className="font-semibold">Solution:</p>
+              <p className="text-muted-foreground">{project.solution}</p>
+            </div>
+          )}
+
+          {project.impact && project.impact.length > 0 && (
+            <div className="text-sm">
+              <p className="font-semibold">Impact:</p>
+              <ul className="mt-1 list-inside list-disc space-y-1 text-muted-foreground">
+                {project.impact.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {project.techHighlights && project.techHighlights.length > 0 && (
+            <div className="text-sm">
+              <p className="font-semibold">Technical Highlights:</p>
+              <ul className="mt-1 list-inside list-disc space-y-1 text-muted-foreground">
+                {project.techHighlights.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
+          {project.techStack.map((tech) => (
+            <Badge key={tech} text={tech} />
           ))}
         </div>
-      )}
+      </div>
     </div>
   )
 }

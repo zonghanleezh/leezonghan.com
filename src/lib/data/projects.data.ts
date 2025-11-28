@@ -5,7 +5,7 @@ import TheVowCarriageImage1 from "@/assets/projects/the-vow-carriage/the-vow-car
 import TheVowCarriageImage2 from "@/assets/projects/the-vow-carriage/the-vow-carriage-2.webp"
 import TheVowCarriageImage3 from "@/assets/projects/the-vow-carriage/the-vow-carriage-3.webp"
 
-interface Project {
+export interface Project {
   title: string
   description: string
   challenge?: string
