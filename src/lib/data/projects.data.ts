@@ -21,9 +21,9 @@ const PROJECTS_DATA: Project[] = [
   {
     title: "The Vow Carriage - Wedding Car Rental Platform",
     description:
-      "A conversion-focused wedding car rental website featuring, dynamic pricing packages, blog integration with Sanity CMS, and comprehensive SEO implementation with Schema.org markup.",
+      "A conversion-focused wedding car rental website featuring, dynamic pricing packages, blog integration with Sanity CMS, and comprehensive SEO implementation.",
     challenge:
-      "Small family-run business needed online presence to compete with larger wedding car rental companies while staying within budget.",
+      "Small Singapore-based family-run business needed online presence to compete with larger wedding car rental companies while staying within budget.",
     solution:
       "Built conversion-focused website with brand storytelling and integrated booking inquiries using Next.js and Sanity CMS.",
     impact: [
