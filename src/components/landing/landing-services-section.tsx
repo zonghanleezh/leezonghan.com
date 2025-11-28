@@ -7,9 +7,8 @@ const LandingServicesSection = () => {
     <div className="flex flex-col gap-3 lg:gap-4">
       <h2 className="text-xl font-semibold lg:text-2xl">How I Can Help</h2>
       <p className="text-sm lg:text-base">
-        My services are designed to solve problems and create value. I partner
-        with you to build robust, user-centric applications that drive growth
-        and improve efficiency. Let&apos;s work together to{" "}
+        My services are designed to solve problems and create value. Let&apos;s
+        work together to{" "}
         <Link
           href="/#contact"
           className="font-semibold text-primary transition-colors hover:text-accent">
