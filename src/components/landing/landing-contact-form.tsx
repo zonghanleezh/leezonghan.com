@@ -158,7 +158,9 @@ const LandingContactForm = () => {
                 </FormControl>
                 <SelectContent>
                   {PRICING_DATA.map((item) => (
-                    <SelectItem value={item.slug}>{item.title}</SelectItem>
+                    <SelectItem key={item.slug} value={item.slug}>
+                      {item.title}
+                    </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -180,7 +182,9 @@ const LandingContactForm = () => {
                 </FormControl>
                 <SelectContent>
                   {TIMELINE_DATA.map((item) => (
-                    <SelectItem value={item.slug}>{item.title}</SelectItem>
+                    <SelectItem key={item.slug} value={item.slug}>
+                      {item.title}
+                    </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
