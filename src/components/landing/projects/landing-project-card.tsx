@@ -1,17 +1,14 @@
 "use client"
 
-import { useState } from "react"
-import { ChevronDown, ExternalLink } from "lucide-react"
+import { ExternalLink } from "lucide-react"
 
-import { cn } from "@/lib/cn"
 import { Project } from "@/lib/data/projects.data"
 import Badge from "@/components/common/badge"
 import Link from "@/components/common/link"
-import LandingProjectImageCarousel from "@/components/landing/landing-project-image-carousel"
+import LandingProjectAccordion from "@/components/landing/projects/landing-project-accordion"
+import LandingProjectImageCarousel from "@/components/landing/projects/landing-project-image-carousel"
 
 const LandingProjectCard = ({ project }: { project: Project }) => {
-  const [isExpanded, setIsExpanded] = useState(false)
-
   return (
     <div className="flex flex-col gap-4 rounded-lg border p-3 lg:p-4">
       <LandingProjectImageCarousel
@@ -35,23 +32,13 @@ const LandingProjectCard = ({ project }: { project: Project }) => {
           <p className="mt-2 text-sm">{project.description}</p>
         </div>
 
-        <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="flex w-fit items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80 md:hidden">
-          {isExpanded ? "Hide Details" : "View Details"}
-          <ChevronDown
-            className={cn(
-              "size-4 transition-transform duration-300",
-              isExpanded && "rotate-180"
-            )}
-          />
-        </button>
+        {/* Mobile: Accordion */}
+        <div className="md:hidden">
+          <LandingProjectAccordion project={project} />
+        </div>
 
-        <div
-          className={cn(
-            "flex-col gap-3 lg:gap-4",
-            isExpanded ? "flex" : "hidden md:flex"
-          )}>
+        {/* Desktop: Always visible */}
+        <div className="hidden flex-col gap-3 md:flex lg:gap-4">
           {project.challenge && (
             <div className="text-sm">
               <p className="font-semibold">Challenge:</p>

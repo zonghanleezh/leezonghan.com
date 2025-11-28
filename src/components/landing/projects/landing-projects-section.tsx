@@ -1,5 +1,5 @@
 import PROJECTS_DATA from "@/lib/data/projects.data"
-import LandingProjectCard from "@/components/landing/landing-project-card"
+import LandingProjectCard from "@/components/landing/projects/landing-project-card"
 
 const LandingProjectsSection = () => {
   return (

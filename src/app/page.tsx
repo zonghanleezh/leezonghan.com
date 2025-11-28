@@ -2,9 +2,9 @@ import LandingAboutMeSection from "@/components/landing/landing-about-me-section
 import LandingContactSection from "@/components/landing/landing-contact-section"
 import LandingExperienceSection from "@/components/landing/landing-experience-section"
 import LandingProfileSection from "@/components/landing/landing-profile-section"
-import LandingProjectsSection from "@/components/landing/landing-projects-section"
 import LandingServicesSection from "@/components/landing/landing-services-section"
 import LandingTestimonialsSection from "@/components/landing/landing-testimonials-section"
+import LandingProjectsSection from "@/components/landing/projects/landing-projects-section"
 import Footer from "@/components/layout/footer"
 import NavigationMenu from "@/components/navigation-menu"
 
